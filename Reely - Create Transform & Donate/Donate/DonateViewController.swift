@@ -19,7 +19,7 @@ class DonateViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //print
     }
     
     override func viewWillAppear(_ animated: Bool) {
