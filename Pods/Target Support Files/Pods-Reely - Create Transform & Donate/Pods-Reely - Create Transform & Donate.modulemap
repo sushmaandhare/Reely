@@ -1,0 +1,6 @@
+framework module Pods_Reely___Create_Transform___Donate {
+  umbrella header "Pods-Reely - Create Transform & Donate-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0452841A26BEAEE10001CBD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0452841926BEAEE10001CBD0 /* GoogleService-Info.plist */; };
+		04566E0A26B41D04003AD58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04566E0926B41D04003AD58D /* AppDelegate.swift */; };
+		04566E0C26B41D04003AD58D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04566E0B26B41D04003AD58D /* SceneDelegate.swift */; };
+		04566E0E26B41D04003AD58D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04566E0D26B41D04003AD58D /* ViewController.swift */; };
+		04566E1126B41D04003AD58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04566E0F26B41D04003AD58D /* Main.storyboard */; };
+		04566E1326B41D06003AD58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04566E1226B41D06003AD58D /* Assets.xcassets */; };
+		04566E1626B41D06003AD58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04566E1426B41D06003AD58D /* LaunchScreen.storyboard */; };
+		0487737426C5311C00522A0D /* TrimmerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487737326C5311C00522A0D /* TrimmerViewController.swift */; };
+		04B5486626C6693A00E9DC8A /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5486526C6693A00E9DC8A /* EditViewController.swift */; };
+		04B5486926C6698C00E9DC8A /* ChangeEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5486826C6698C00E9DC8A /* ChangeEffectViewController.swift */; };
+		04B5486C26C66C1600E9DC8A /* videoUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5486B26C66C1600E9DC8A /* videoUploadViewController.swift */; };
+		04D436E926B97FDF0002EBFA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D436E826B97FDF0002EBFA /* LoginVC.swift */; };
+		04D436ED26B9807F0002EBFA /* PhoneVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D436EC26B9807F0002EBFA /* PhoneVerificationVC.swift */; };
+		04D436F026B980B60002EBFA /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D436EF26B980B60002EBFA /* OTPVC.swift */; };
+		04D436F326B980E80002EBFA /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D436F226B980E80002EBFA /* AnimationVC.swift */; };
+		04FA3DD826C3CD45008ACD4E /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DD726C3CD45008ACD4E /* TabbarViewController.swift */; };
+		04FA3DDB26C41F2D008ACD4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DDA26C41F2D008ACD4E /* HomeViewController.swift */; };
+		04FA3DDE26C41F76008ACD4E /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DDD26C41F76008ACD4E /* DonateViewController.swift */; };
+		04FA3DE126C41FB0008ACD4E /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DE026C41FB0008ACD4E /* CreateViewController.swift */; };
+		04FA3DE426C4418E008ACD4E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DE326C4418E008ACD4E /* ShopViewController.swift */; };
+		04FA3DE726C441E0008ACD4E /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DE626C441E0008ACD4E /* TeamViewController.swift */; };
+		5B7046244F131972F7326986 /* Pods_Reely___Create_Transform___Donate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC097E7991DA747913630FD /* Pods_Reely___Create_Transform___Donate.framework */; };
+		D00EBB12270EF14A00DEB994 /* ContributeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EBB11270EF14A00DEB994 /* ContributeVC.swift */; };
+		D0104C8526DD1F2C00D48548 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0104C8426DD1F2C00D48548 /* PreviewVC.swift */; };
+		D0104C8726DD20B800D48548 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0104C8626DD20B800D48548 /* Helper.swift */; };
+		D0115FD126DF649100582726 /* HashtagListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0115FD026DF649100582726 /* HashtagListVC.swift */; };
+		D01D4ABB271EC02B00633537 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D4ABA271EC02B00633537 /* PrivacyVC.swift */; };
+		D01D4ABE271ED3F500633537 /* DonateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D4ABD271ED3F500633537 /* DonateList.swift */; };
+		D01D4AC0271ED46E00633537 /* DonateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D4ABF271ED46E00633537 /* DonateTableViewCell.swift */; };
+		D01D4AC2271ED9BD00633537 /* DonateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D4AC1271ED9BD00633537 /* DonateDetailViewController.swift */; };
+		D02965342710417F004B6BE2 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02965332710417F004B6BE2 /* DatePickerVC.swift */; };
+		D029653627104B0F004B6BE2 /* ThankYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D029653527104B0F004B6BE2 /* ThankYouVC.swift */; };
+		D032C06826E7770E00AA784B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032C06726E7770E00AA784B /* Home.swift */; };
+		D032C06E26E77C4E00AA784B /* HomeVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032C06A26E77C4C00AA784B /* HomeVideoTVC.swift */; };
+		D032C06F26E77C4E00AA784B /* HomeVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032C06B26E77C4D00AA784B /* HomeVideoCollectionViewCell.swift */; };
+		D032C07026E77C4E00AA784B /* HomeHashtagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032C06C26E77C4D00AA784B /* HomeHashtagTVC.swift */; };
+		D032C07126E77C4E00AA784B /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D032C06D26E77C4E00AA784B /* HomeCollectionViewCell.swift */; };
+		D0C33E0626CE5F9E0043DBD3 /* VSVideoSpeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C33E0526CE5F9E0043DBD3 /* VSVideoSpeeder.swift */; };
+		D0C803AA270D89A100477AC4 /* TeamVideoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C803A9270D89A100477AC4 /* TeamVideoCVC.swift */; };
+		D0C803AC270DC0CD00477AC4 /* FundDonateListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C803AB270DC0CC00477AC4 /* FundDonateListVC.swift */; };
+		D0CD6C2126D54E6D0097C3AF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD6C2026D54E6D0097C3AF /* ProfileViewController.swift */; };
+		D0CD6C2426D54EDC0097C3AF /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD6C2326D54EDC0097C3AF /* UserProfileViewController.swift */; };
+		D0D10E8D26D653C200FC743E /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D10E8C26D653C200FC743E /* Videos.swift */; };
+		D0D10E8F26D656B900FC743E /* ProfileCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D10E8E26D656B900FC743E /* ProfileCVC.swift */; };
+		D0DA188627154B8F0010B143 /* HashTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA188527154B8F0010B143 /* HashTagViewController.swift */; };
+		D0DA188827154BBD0010B143 /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA188727154BBD0010B143 /* HashTagCollectionViewCell.swift */; };
+		D0DA188A27154BFF0010B143 /* HashTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA188927154BFF0010B143 /* HashTagModel.swift */; };
+		D0DA188C271584420010B143 /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA188B271584420010B143 /* PlayerVC.swift */; };
+		D0EAFB4D26DA25BC00F770B9 /* VideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAFB4C26DA25BC00F770B9 /* VideoPlayerVC.swift */; };
+		D0EAFB4F26DA337A00F770B9 /* VideoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAFB4E26DA337A00F770B9 /* VideoCVC.swift */; };
+		D0FBE851270C2E0200CDB00A /* TeamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE850270C2E0200CDB00A /* TeamList.swift */; };
+		D0FBE853270C305100CDB00A /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE852270C305100CDB00A /* TeamTableViewCell.swift */; };
+		D0FBE855270C361300CDB00A /* CreateTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE854270C361300CDB00A /* CreateTeamVC.swift */; };
+		D0FBE857270C533300CDB00A /* TeamListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE856270C533300CDB00A /* TeamListVC.swift */; };
+		D0FBE859270C53F800CDB00A /* TeamDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE858270C53F800CDB00A /* TeamDetailsVC.swift */; };
+		D0FBE85B270C58EE00CDB00A /* TeamMemberListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE85A270C58EE00CDB00A /* TeamMemberListVC.swift */; };
+		D0FBE85D270C593300CDB00A /* SelfTeamDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FBE85C270C593300CDB00A /* SelfTeamDetailsVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		020D2F7A66B826539939D065 /* Pods-Reely - Create Transform & Donate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reely - Create Transform & Donate.debug.xcconfig"; path = "Target Support Files/Pods-Reely - Create Transform & Donate/Pods-Reely - Create Transform & Donate.debug.xcconfig"; sourceTree = "<group>"; };
+		043CD1CE26B7E8A4008C5D8F /* Reely - Create Transform & Donate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reely - Create Transform & Donate-Bridging-Header.h"; sourceTree = "<group>"; };
+		0452841926BEAEE10001CBD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04566E0626B41D04003AD58D /* Reely - Create Transform & Donate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reely - Create Transform & Donate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04566E0926B41D04003AD58D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04566E0B26B41D04003AD58D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04566E0D26B41D04003AD58D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04566E1026B41D04003AD58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04566E1226B41D06003AD58D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04566E1526B41D06003AD58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04566E1726B41D06003AD58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0487737326C5311C00522A0D /* TrimmerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimmerViewController.swift; sourceTree = "<group>"; };
+		04B5486526C6693A00E9DC8A /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		04B5486826C6698C00E9DC8A /* ChangeEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEffectViewController.swift; sourceTree = "<group>"; };
+		04B5486B26C66C1600E9DC8A /* videoUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoUploadViewController.swift; sourceTree = "<group>"; };
+		04D436E826B97FDF0002EBFA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		04D436EC26B9807F0002EBFA /* PhoneVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationVC.swift; sourceTree = "<group>"; };
+		04D436EF26B980B60002EBFA /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
+		04D436F226B980E80002EBFA /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
+		04FA3DD726C3CD45008ACD4E /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		04FA3DDA26C41F2D008ACD4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		04FA3DDD26C41F76008ACD4E /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		04FA3DE026C41FB0008ACD4E /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		04FA3DE326C4418E008ACD4E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		04FA3DE626C441E0008ACD4E /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		5D7B79D6640954466DAA542F /* Pods-Reely - Create Transform & Donate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reely - Create Transform & Donate.release.xcconfig"; path = "Target Support Files/Pods-Reely - Create Transform & Donate/Pods-Reely - Create Transform & Donate.release.xcconfig"; sourceTree = "<group>"; };
+		8BC097E7991DA747913630FD /* Pods_Reely___Create_Transform___Donate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Reely___Create_Transform___Donate.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00EBB11270EF14A00DEB994 /* ContributeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeVC.swift; sourceTree = "<group>"; };
+		D0104C8426DD1F2C00D48548 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
+		D0104C8626DD20B800D48548 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		D0115FD026DF649100582726 /* HashtagListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagListVC.swift; sourceTree = "<group>"; };
+		D01D4ABA271EC02B00633537 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
+		D01D4ABD271ED3F500633537 /* DonateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateList.swift; sourceTree = "<group>"; };
+		D01D4ABF271ED46E00633537 /* DonateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateTableViewCell.swift; sourceTree = "<group>"; };
+		D01D4AC1271ED9BD00633537 /* DonateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailViewController.swift; sourceTree = "<group>"; };
+		D02965332710417F004B6BE2 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		D029653527104B0F004B6BE2 /* ThankYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
+		D032C06726E7770E00AA784B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D032C06A26E77C4C00AA784B /* HomeVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVideoTVC.swift; sourceTree = "<group>"; };
+		D032C06B26E77C4D00AA784B /* HomeVideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		D032C06C26E77C4D00AA784B /* HomeHashtagTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHashtagTVC.swift; sourceTree = "<group>"; };
+		D032C06D26E77C4E00AA784B /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0C33E0526CE5F9E0043DBD3 /* VSVideoSpeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSVideoSpeeder.swift; sourceTree = "<group>"; };
+		D0C803A9270D89A100477AC4 /* TeamVideoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamVideoCVC.swift; sourceTree = "<group>"; };
+		D0C803AB270DC0CC00477AC4 /* FundDonateListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDonateListVC.swift; sourceTree = "<group>"; };
+		D0CD6C2026D54E6D0097C3AF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D0CD6C2326D54EDC0097C3AF /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		D0D10E8C26D653C200FC743E /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		D0D10E8E26D656B900FC743E /* ProfileCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCVC.swift; sourceTree = "<group>"; };
+		D0D8BA0226DD3D0500761DC6 /* Reely - Create Transform & Donate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Reely - Create Transform & Donate.entitlements"; sourceTree = "<group>"; };
+		D0DA188527154B8F0010B143 /* HashTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagViewController.swift; sourceTree = "<group>"; };
+		D0DA188727154BBD0010B143 /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0DA188927154BFF0010B143 /* HashTagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagModel.swift; sourceTree = "<group>"; };
+		D0DA188B271584420010B143 /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
+		D0EAFB4C26DA25BC00F770B9 /* VideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerVC.swift; sourceTree = "<group>"; };
+		D0EAFB4E26DA337A00F770B9 /* VideoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCVC.swift; sourceTree = "<group>"; };
+		D0FBE850270C2E0200CDB00A /* TeamList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamList.swift; sourceTree = "<group>"; };
+		D0FBE852270C305100CDB00A /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		D0FBE854270C361300CDB00A /* CreateTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamVC.swift; sourceTree = "<group>"; };
+		D0FBE856270C533300CDB00A /* TeamListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListVC.swift; sourceTree = "<group>"; };
+		D0FBE858270C53F800CDB00A /* TeamDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsVC.swift; sourceTree = "<group>"; };
+		D0FBE85A270C58EE00CDB00A /* TeamMemberListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberListVC.swift; sourceTree = "<group>"; };
+		D0FBE85C270C593300CDB00A /* SelfTeamDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfTeamDetailsVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04566E0326B41D04003AD58D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7046244F131972F7326986 /* Pods_Reely___Create_Transform___Donate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04143AD726B875EA00DBF40B /* Model Class */ = {
+			isa = PBXGroup;
+			children = (
+				D0C33E0526CE5F9E0043DBD3 /* VSVideoSpeeder.swift */,
+				D0D10E8C26D653C200FC743E /* Videos.swift */,
+				D0104C8626DD20B800D48548 /* Helper.swift */,
+				D032C06726E7770E00AA784B /* Home.swift */,
+				D0FBE850270C2E0200CDB00A /* TeamList.swift */,
+				D0DA188927154BFF0010B143 /* HashTagModel.swift */,
+				D01D4ABD271ED3F500633537 /* DonateList.swift */,
+			);
+			path = "Model Class";
+			sourceTree = "<group>";
+		};
+		04566DFD26B41D04003AD58D = {
+			isa = PBXGroup;
+			children = (
+				0452841926BEAEE10001CBD0 /* GoogleService-Info.plist */,
+				04566E0826B41D04003AD58D /* Reely - Create Transform & Donate */,
+				04566E0726B41D04003AD58D /* Products */,
+				043CD1CE26B7E8A4008C5D8F /* Reely - Create Transform & Donate-Bridging-Header.h */,
+				2B35E84CFB082BEEB8A92341 /* Pods */,
+				806C93FC1F13A77A5501CFAA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04566E0726B41D04003AD58D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04566E0626B41D04003AD58D /* Reely - Create Transform & Donate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04566E0826B41D04003AD58D /* Reely - Create Transform & Donate */ = {
+			isa = PBXGroup;
+			children = (
+				D01D4ABC271ED35A00633537 /* Donate */,
+				D0FBE84F270C2CC100CDB00A /* Create */,
+				D0FBE84E270C2C5A00CDB00A /* Team */,
+				D0D8BA0226DD3D0500761DC6 /* Reely - Create Transform & Donate.entitlements */,
+				D0CD6C2226D54EC10097C3AF /* Profile */,
+				04143AD726B875EA00DBF40B /* Model Class */,
+				04566E0926B41D04003AD58D /* AppDelegate.swift */,
+				04566E0B26B41D04003AD58D /* SceneDelegate.swift */,
+				04566E0D26B41D04003AD58D /* ViewController.swift */,
+				04566E0F26B41D04003AD58D /* Main.storyboard */,
+				04FA3DE326C4418E008ACD4E /* ShopViewController.swift */,
+				D032C06926E77BED00AA784B /* Home */,
+				04FA3DD726C3CD45008ACD4E /* TabbarViewController.swift */,
+				04D436F226B980E80002EBFA /* AnimationVC.swift */,
+				04D436EF26B980B60002EBFA /* OTPVC.swift */,
+				04D436EC26B9807F0002EBFA /* PhoneVerificationVC.swift */,
+				04D436E826B97FDF0002EBFA /* LoginVC.swift */,
+				04566E1226B41D06003AD58D /* Assets.xcassets */,
+				04566E1426B41D06003AD58D /* LaunchScreen.storyboard */,
+				04566E1726B41D06003AD58D /* Info.plist */,
+				D0CD6C2026D54E6D0097C3AF /* ProfileViewController.swift */,
+				D0EAFB4C26DA25BC00F770B9 /* VideoPlayerVC.swift */,
+				D0DA188B271584420010B143 /* PlayerVC.swift */,
+				D0DA188427154B550010B143 /* Hashtag */,
+				D0EAFB4E26DA337A00F770B9 /* VideoCVC.swift */,
+				D0104C8426DD1F2C00D48548 /* PreviewVC.swift */,
+				D0115FD026DF649100582726 /* HashtagListVC.swift */,
+			);
+			path = "Reely - Create Transform & Donate";
+			sourceTree = "<group>";
+		};
+		2B35E84CFB082BEEB8A92341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				020D2F7A66B826539939D065 /* Pods-Reely - Create Transform & Donate.debug.xcconfig */,
+				5D7B79D6640954466DAA542F /* Pods-Reely - Create Transform & Donate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		806C93FC1F13A77A5501CFAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BC097E7991DA747913630FD /* Pods_Reely___Create_Transform___Donate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D01D4ABC271ED35A00633537 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				04FA3DDD26C41F76008ACD4E /* DonateViewController.swift */,
+				D01D4ABF271ED46E00633537 /* DonateTableViewCell.swift */,
+				D01D4AC1271ED9BD00633537 /* DonateDetailViewController.swift */,
+			);
+			path = Donate;
+			sourceTree = "<group>";
+		};
+		D032C06926E77BED00AA784B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D032C06D26E77C4E00AA784B /* HomeCollectionViewCell.swift */,
+				D032C06C26E77C4D00AA784B /* HomeHashtagTVC.swift */,
+				D032C06B26E77C4D00AA784B /* HomeVideoCollectionViewCell.swift */,
+				D032C06A26E77C4C00AA784B /* HomeVideoTVC.swift */,
+				04FA3DDA26C41F2D008ACD4E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D0CD6C2226D54EC10097C3AF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D0CD6C2326D54EDC0097C3AF /* UserProfileViewController.swift */,
+				D0D10E8E26D656B900FC743E /* ProfileCVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D0DA188427154B550010B143 /* Hashtag */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA188527154B8F0010B143 /* HashTagViewController.swift */,
+				D0DA188727154BBD0010B143 /* HashTagCollectionViewCell.swift */,
+			);
+			path = Hashtag;
+			sourceTree = "<group>";
+		};
+		D0FBE84E270C2C5A00CDB00A /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				04FA3DE626C441E0008ACD4E /* TeamViewController.swift */,
+				D0FBE852270C305100CDB00A /* TeamTableViewCell.swift */,
+				D0FBE854270C361300CDB00A /* CreateTeamVC.swift */,
+				D0FBE856270C533300CDB00A /* TeamListVC.swift */,
+				D0FBE858270C53F800CDB00A /* TeamDetailsVC.swift */,
+				D0FBE85A270C58EE00CDB00A /* TeamMemberListVC.swift */,
+				D0FBE85C270C593300CDB00A /* SelfTeamDetailsVC.swift */,
+				D0C803A9270D89A100477AC4 /* TeamVideoCVC.swift */,
+				D0C803AB270DC0CC00477AC4 /* FundDonateListVC.swift */,
+				D00EBB11270EF14A00DEB994 /* ContributeVC.swift */,
+				D02965332710417F004B6BE2 /* DatePickerVC.swift */,
+				D029653527104B0F004B6BE2 /* ThankYouVC.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		D0FBE84F270C2CC100CDB00A /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				04FA3DE026C41FB0008ACD4E /* CreateViewController.swift */,
+				0487737326C5311C00522A0D /* TrimmerViewController.swift */,
+				04B5486B26C66C1600E9DC8A /* videoUploadViewController.swift */,
+				04B5486826C6698C00E9DC8A /* ChangeEffectViewController.swift */,
+				04B5486526C6693A00E9DC8A /* EditViewController.swift */,
+				D01D4ABA271EC02B00633537 /* PrivacyVC.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04566E0526B41D04003AD58D /* Reely - Create Transform & Donate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04566E1A26B41D06003AD58D /* Build configuration list for PBXNativeTarget "Reely - Create Transform & Donate" */;
+			buildPhases = (
+				E1DC82207D98D4F3D32D734A /* [CP] Check Pods Manifest.lock */,
+				04566E0226B41D04003AD58D /* Sources */,
+				04566E0326B41D04003AD58D /* Frameworks */,
+				04566E0426B41D04003AD58D /* Resources */,
+				4A2A815C312C85D303296D15 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reely - Create Transform & Donate";
+			productName = "Reely - Create Transform & Donate";
+			productReference = 04566E0626B41D04003AD58D /* Reely - Create Transform & Donate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04566DFE26B41D04003AD58D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					04566E0526B41D04003AD58D = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = 04566E0126B41D04003AD58D /* Build configuration list for PBXProject "Reely - Create Transform & Donate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04566DFD26B41D04003AD58D;
+			productRefGroup = 04566E0726B41D04003AD58D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04566E0526B41D04003AD58D /* Reely - Create Transform & Donate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04566E0426B41D04003AD58D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04566E1626B41D06003AD58D /* LaunchScreen.storyboard in Resources */,
+				0452841A26BEAEE10001CBD0 /* GoogleService-Info.plist in Resources */,
+				04566E1326B41D06003AD58D /* Assets.xcassets in Resources */,
+				04566E1126B41D04003AD58D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A2A815C312C85D303296D15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reely - Create Transform & Donate/Pods-Reely - Create Transform & Donate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reely - Create Transform & Donate/Pods-Reely - Create Transform & Donate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reely - Create Transform & Donate/Pods-Reely - Create Transform & Donate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1DC82207D98D4F3D32D734A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reely - Create Transform & Donate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04566E0226B41D04003AD58D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FA3DE126C41FB0008ACD4E /* CreateViewController.swift in Sources */,
+				D0FBE859270C53F800CDB00A /* TeamDetailsVC.swift in Sources */,
+				D032C06F26E77C4E00AA784B /* HomeVideoCollectionViewCell.swift in Sources */,
+				D0FBE853270C305100CDB00A /* TeamTableViewCell.swift in Sources */,
+				D0CD6C2126D54E6D0097C3AF /* ProfileViewController.swift in Sources */,
+				D01D4AC0271ED46E00633537 /* DonateTableViewCell.swift in Sources */,
+				D0DA188827154BBD0010B143 /* HashTagCollectionViewCell.swift in Sources */,
+				D0FBE85D270C593300CDB00A /* SelfTeamDetailsVC.swift in Sources */,
+				D032C06826E7770E00AA784B /* Home.swift in Sources */,
+				D01D4ABB271EC02B00633537 /* PrivacyVC.swift in Sources */,
+				D032C07026E77C4E00AA784B /* HomeHashtagTVC.swift in Sources */,
+				04FA3DD826C3CD45008ACD4E /* TabbarViewController.swift in Sources */,
+				04FA3DE726C441E0008ACD4E /* TeamViewController.swift in Sources */,
+				D0104C8726DD20B800D48548 /* Helper.swift in Sources */,
+				D029653627104B0F004B6BE2 /* ThankYouVC.swift in Sources */,
+				04D436ED26B9807F0002EBFA /* PhoneVerificationVC.swift in Sources */,
+				D0C803AC270DC0CD00477AC4 /* FundDonateListVC.swift in Sources */,
+				D0DA188C271584420010B143 /* PlayerVC.swift in Sources */,
+				D0EAFB4F26DA337A00F770B9 /* VideoCVC.swift in Sources */,
+				D0FBE857270C533300CDB00A /* TeamListVC.swift in Sources */,
+				04566E0E26B41D04003AD58D /* ViewController.swift in Sources */,
+				D0C803AA270D89A100477AC4 /* TeamVideoCVC.swift in Sources */,
+				04B5486626C6693A00E9DC8A /* EditViewController.swift in Sources */,
+				04D436E926B97FDF0002EBFA /* LoginVC.swift in Sources */,
+				D0C33E0626CE5F9E0043DBD3 /* VSVideoSpeeder.swift in Sources */,
+				D01D4ABE271ED3F500633537 /* DonateList.swift in Sources */,
+				D0FBE851270C2E0200CDB00A /* TeamList.swift in Sources */,
+				D0104C8526DD1F2C00D48548 /* PreviewVC.swift in Sources */,
+				04566E0A26B41D04003AD58D /* AppDelegate.swift in Sources */,
+				D0FBE855270C361300CDB00A /* CreateTeamVC.swift in Sources */,
+				D0FBE85B270C58EE00CDB00A /* TeamMemberListVC.swift in Sources */,
+				D032C07126E77C4E00AA784B /* HomeCollectionViewCell.swift in Sources */,
+				D0EAFB4D26DA25BC00F770B9 /* VideoPlayerVC.swift in Sources */,
+				D0D10E8F26D656B900FC743E /* ProfileCVC.swift in Sources */,
+				04FA3DDB26C41F2D008ACD4E /* HomeViewController.swift in Sources */,
+				D0DA188627154B8F0010B143 /* HashTagViewController.swift in Sources */,
+				D032C06E26E77C4E00AA784B /* HomeVideoTVC.swift in Sources */,
+				04D436F326B980E80002EBFA /* AnimationVC.swift in Sources */,
+				04B5486926C6698C00E9DC8A /* ChangeEffectViewController.swift in Sources */,
+				04FA3DE426C4418E008ACD4E /* ShopViewController.swift in Sources */,
+				D01D4AC2271ED9BD00633537 /* DonateDetailViewController.swift in Sources */,
+				D00EBB12270EF14A00DEB994 /* ContributeVC.swift in Sources */,
+				04D436F026B980B60002EBFA /* OTPVC.swift in Sources */,
+				D0DA188A27154BFF0010B143 /* HashTagModel.swift in Sources */,
+				D0CD6C2426D54EDC0097C3AF /* UserProfileViewController.swift in Sources */,
+				D02965342710417F004B6BE2 /* DatePickerVC.swift in Sources */,
+				0487737426C5311C00522A0D /* TrimmerViewController.swift in Sources */,
+				D0115FD126DF649100582726 /* HashtagListVC.swift in Sources */,
+				04566E0C26B41D04003AD58D /* SceneDelegate.swift in Sources */,
+				04FA3DDE26C41F76008ACD4E /* DonateViewController.swift in Sources */,
+				04B5486C26C66C1600E9DC8A /* videoUploadViewController.swift in Sources */,
+				D0D10E8D26D653C200FC743E /* Videos.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04566E0F26B41D04003AD58D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04566E1026B41D04003AD58D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04566E1426B41D06003AD58D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04566E1526B41D06003AD58D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04566E1826B41D06003AD58D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04566E1926B41D06003AD58D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04566E1B26B41D06003AD58D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 020D2F7A66B826539939D065 /* Pods-Reely - Create Transform & Donate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Reely - Create Transform & Donate/Reely - Create Transform & Donate.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7JS5UND69;
+				INFOPLIST_FILE = "Reely - Create Transform & Donate/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.destek.reely;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reely - Create Transform & Donate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04566E1C26B41D06003AD58D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D7B79D6640954466DAA542F /* Pods-Reely - Create Transform & Donate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Reely - Create Transform & Donate/Reely - Create Transform & Donate.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R7JS5UND69;
+				INFOPLIST_FILE = "Reely - Create Transform & Donate/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.destek.reely;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reely - Create Transform & Donate-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04566E0126B41D04003AD58D /* Build configuration list for PBXProject "Reely - Create Transform & Donate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04566E1826B41D06003AD58D /* Debug */,
+				04566E1926B41D06003AD58D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04566E1A26B41D06003AD58D /* Build configuration list for PBXNativeTarget "Reely - Create Transform & Donate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04566E1B26B41D06003AD58D /* Debug */,
+				04566E1C26B41D06003AD58D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04566DFE26B41D04003AD58D /* Project object */;
+}
