@@ -22,6 +22,8 @@ class DonateViewController: UIViewController, UITableViewDataSource, UITableView
         //print
     }
     
+    //print("something")
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.DonateListApiCall()
