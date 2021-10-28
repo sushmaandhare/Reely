@@ -54,6 +54,11 @@ class DonateDetailViewController: UIViewController {
     @IBAction func ProfileBtnAction(_ sender: UIButton) {
     }
     
+    @IBAction func ContributeBtnAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func ShareFunderBtnAction(_ sender: UIButton) {
+    }
     
     @IBAction func onTapJoin(_ sender: UIButton) {
         let url : String = self.appDelegate.baseUrl!+self.appDelegate.joinActivity!
