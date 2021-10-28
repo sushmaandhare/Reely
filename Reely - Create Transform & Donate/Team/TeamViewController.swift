@@ -29,6 +29,19 @@ class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.TeamListApiCall()
     }
     
+    
+    @IBAction func CartBtnAction(_ sender: UIButton) {
+        
+    }
+    
+    
+    @IBAction func NotificationBtnAction(_ sender: UIButton) {
+    }
+    
+    
+    
+    @IBAction func ProfileBtnAction(_ sender: UIButton) {
+    }
     @IBAction func JoinTeamBtnAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let yourVC: TeamListVC = storyboard.instantiateViewController(withIdentifier: "TeamListVC") as! TeamListVC

@@ -44,6 +44,17 @@ class DonateDetailViewController: UIViewController {
       
     }
     
+    
+    @IBAction func cartBtnAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func NotificationBtnAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func ProfileBtnAction(_ sender: UIButton) {
+    }
+    
+    
     @IBAction func onTapJoin(_ sender: UIButton) {
         let url : String = self.appDelegate.baseUrl!+self.appDelegate.joinActivity!
         
