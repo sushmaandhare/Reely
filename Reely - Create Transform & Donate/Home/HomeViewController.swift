@@ -50,6 +50,20 @@ class HomeViewController: UIViewController {
         getDiscoverVideos()
     }
     
+    @IBAction func CartBtnAction(_ sender: Any) {
+    }
+    
+    @IBAction func NotificationBtnAction(_ sender: Any) {
+    }
+    
+    @IBAction func MsgBtnAction(_ sender: Any) {
+    }
+    
+    
+    @IBAction func ProfileBtnAction(_ sender: Any) {
+        
+    }
+    
     @IBAction func onTapLogout(_ sender: UIButton) {
         let alert = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in

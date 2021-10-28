@@ -22,13 +22,20 @@ class DonateViewController: UIViewController, UITableViewDataSource, UITableView
         //print
     }
     
-    //print("something")
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.DonateListApiCall()
     }
-
+    
+    @IBAction func CartBtnAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func NotificationBtnAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func ProfileBtnAction(_ sender: UIButton) {
+    }
     func DonateListApiCall(){
         
             let url : String = self.appDelegate.baseUrl!+self.appDelegate.donateTeamList!

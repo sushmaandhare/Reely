@@ -29,6 +29,7 @@
 		04FA3DE426C4418E008ACD4E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DE326C4418E008ACD4E /* ShopViewController.swift */; };
 		04FA3DE726C441E0008ACD4E /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA3DE626C441E0008ACD4E /* TeamViewController.swift */; };
 		5B7046244F131972F7326986 /* Pods_Reely___Create_Transform___Donate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC097E7991DA747913630FD /* Pods_Reely___Create_Transform___Donate.framework */; };
+		B75F09612729E58E0091237F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75F09602729E58E0091237F /* NotificationsViewController.swift */; };
 		D00EBB12270EF14A00DEB994 /* ContributeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EBB11270EF14A00DEB994 /* ContributeVC.swift */; };
 		D0104C8526DD1F2C00D48548 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0104C8426DD1F2C00D48548 /* PreviewVC.swift */; };
 		D0104C8726DD20B800D48548 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0104C8626DD20B800D48548 /* Helper.swift */; };
@@ -94,6 +95,7 @@
 		04FA3DE626C441E0008ACD4E /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		5D7B79D6640954466DAA542F /* Pods-Reely - Create Transform & Donate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reely - Create Transform & Donate.release.xcconfig"; path = "Target Support Files/Pods-Reely - Create Transform & Donate/Pods-Reely - Create Transform & Donate.release.xcconfig"; sourceTree = "<group>"; };
 		8BC097E7991DA747913630FD /* Pods_Reely___Create_Transform___Donate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Reely___Create_Transform___Donate.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75F09602729E58E0091237F /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		D00EBB11270EF14A00DEB994 /* ContributeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributeVC.swift; sourceTree = "<group>"; };
 		D0104C8426DD1F2C00D48548 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 		D0104C8626DD20B800D48548 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				04566E0B26B41D04003AD58D /* SceneDelegate.swift */,
 				04566E0D26B41D04003AD58D /* ViewController.swift */,
 				04566E0F26B41D04003AD58D /* Main.storyboard */,
+				B75F09602729E58E0091237F /* NotificationsViewController.swift */,
 				04FA3DE326C4418E008ACD4E /* ShopViewController.swift */,
 				D032C06926E77BED00AA784B /* Home */,
 				04FA3DD726C3CD45008ACD4E /* TabbarViewController.swift */,
@@ -457,6 +460,7 @@
 				04D436F326B980E80002EBFA /* AnimationVC.swift in Sources */,
 				04B5486926C6698C00E9DC8A /* ChangeEffectViewController.swift in Sources */,
 				04FA3DE426C4418E008ACD4E /* ShopViewController.swift in Sources */,
+				B75F09612729E58E0091237F /* NotificationsViewController.swift in Sources */,
 				D01D4AC2271ED9BD00633537 /* DonateDetailViewController.swift in Sources */,
 				D00EBB12270EF14A00DEB994 /* ContributeVC.swift in Sources */,
 				04D436F026B980B60002EBFA /* OTPVC.swift in Sources */,
