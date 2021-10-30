@@ -12,12 +12,13 @@ import CameraManager
 import CoreServices
 import AVKit
 import AVFoundation
+import SwiftVideoGenerator
 
 //protocol RecorderVCDelegate {
 //    func DismissUseSoundVC()
 //}
 
-class CreateViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TimerVCDelegate {
   
     func NotifyDismiss(videoUrl: URL) {
        // viewSound.isUserInteractionEnabled = false
@@ -44,35 +45,43 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
-//    func sendTimerValue(timeVal: Float) {
-//        self.time = 0
-//        self.lblCounter.text = "0"
-//     counter = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-//        blurredView.isHidden = false
-//        lblCounter.isHidden = false
-//        counterTime = timeVal
-//    }
     
-//    @objc func updateTimer() {
-//        self.time = self.time + 1
-//        print(self.time)
-//        lblCounter.text = String(self.time)
-//        if self.time == 5 {
-//            counter?.invalidate()
-//           blurredView.isHidden = true
-//            lblCounter.isHidden = true
-//            self.onTapRecordBtn(btnCamera)
-//
-//        }
-//
-//    }
+    func sendTimerValue(timeVal: Float) {
+        self.time = 0
+        self.lblCounter.text = "0"
+     counter = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        blurredView.isHidden = false
+        lblCounter.isHidden = false
+        counterTime = timeVal
+    }
     
+    @objc func updateTimer() {
+        self.time = self.time + 1
+        print(self.time)
+        lblCounter.text = String(self.time)
+        if self.time == 5 {
+            counter?.invalidate()
+           blurredView.isHidden = true
+            lblCounter.isHidden = true
+            self.onTapRecordBtn(btnCamera)
+            
+        }
+       
+    }
+    
+    var isReverse = false
     let cameraManager = CameraManager()
 //    var delegate : RecorderVCDelegate?
    // @IBOutlet weak var lblSoundName: UILabel!
     var time = 0
    // @IBOutlet weak var lblCounter: UILabel!
     @IBOutlet weak var blurredView: UIView!
+    @IBOutlet weak var speedView: UIView!
+    @IBOutlet weak var btnSlowThreeX: UIButton!
+    @IBOutlet weak var btnSlowTwoX: UIButton!
+    @IBOutlet weak var btnOneX: UIButton!
+    @IBOutlet weak var btnFastThreeX: UIButton!
+    @IBOutlet weak var btnFastTwoX: UIButton!
     
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var btnDismiss: UIButton!
@@ -95,11 +104,12 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var reverseLbl: UILabel!
     @IBOutlet weak var btnNext: UIButton!
   //  var fromUseSound = false
-    @IBOutlet weak var filterImgView: UIImageView!
-    @IBOutlet weak var filterLbl: UILabel!
+   // @IBOutlet weak var filterImgView: UIImageView!
+    //@IBOutlet weak var filterLbl: UILabel!
     @IBOutlet weak var flashImgView: UIImageView!
     @IBOutlet weak var timerImgView: UIImageView!
     @IBOutlet weak var cameraImgView: UIImageView!
+    @IBOutlet weak var lblCounter: UILabel!
     
     var videoAndImageReview = UIImagePickerController()
     var myVideoURL: URL!
@@ -187,8 +197,8 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.timerLabel.isHidden = false
             self.speedLabel.isHidden = false
             self.speedImgView.isHidden = false
-            self.filterLbl.isHidden = false
-            self.filterImgView.isHidden = false
+            self.reverseLbl.isHidden = false
+            self.reverseImgView.isHidden = false
         
         }
         
@@ -295,8 +305,8 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.timerLabel.isHidden = true
                 self.cameraImgView.isHidden = true
                 self.cameraLabel.isHidden = true
-                self.filterImgView.isHidden = true
-                self.filterLbl.isHidden = true
+                self.reverseLbl.isHidden = true
+                self.reverseImgView.isHidden = true
                 self.speedImgView.isHidden = true
                 self.speedLabel.isHidden = true
                 
@@ -327,8 +337,8 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.timerLabel.isHidden = false
                 self.cameraImgView.isHidden = false
                 self.cameraLabel.isHidden = false
-                self.filterImgView.isHidden = false
-                self.filterLbl.isHidden = false
+                self.reverseLbl.isHidden = false
+                self.reverseImgView.isHidden = false
                 self.speedImgView.isHidden = false
                 self.speedLabel.isHidden = false
                 
@@ -405,18 +415,49 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func timerButtonTapped(_ sender: UITapGestureRecognizer)
     {
-//       let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//       let vc: TimerVC = storyboard.instantiateViewController(withIdentifier: "TimerVC") as! TimerVC
-//       vc.delegate = self
-//       vc.modalPresentationStyle = .overCurrentContext
-//        self.present(vc, animated: true, completion: nil)
+       let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+       let vc: TimerVC = storyboard.instantiateViewController(withIdentifier: "TimerVC") as! TimerVC
+       vc.delegate = self
+       vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func reverseAction(_ sender: UITapGestureRecognizer) {
+//        self.isReverse = true
+//        if let videoURL1 = self.myVideoURL {
+//         // LoadingView.lockView()
+//          VideoGenerator.fileName = "ReversedMovieFileName"
+//            VideoGenerator.current.reverseVideo(fromVideo: videoURL1 ) { result in
+//
+//                print(result)
+//
+//                switch result{
+//                case .success(let reverseVideo):
+//                    print(reverseVideo)
+//                    //UserDefaults.standard.setValue(reverseVideo, forKey: "finalVideo")
+//                case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//            }
+//
+//        }
+        self.Alert(title: "Coming Soon", msg: "Functionality under progress")
     }
     
+    func Alert(title: String, msg: String){
+    let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+    let okalertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {(alert : UIAlertAction!) in
+        self.dismiss(animated: true, completion: {
+            self.navigationController?.popViewController(animated: true)
+        })
+    })
+    alertController.addAction(okalertAction)
+    present(alertController, animated: true, completion: nil)
+    }
+        
     @IBAction func speedButtonTapped(_ sender: UITapGestureRecognizer)
     {
 
+        self.Alert(title: "Coming Soon", msg: "Functionality under progress")
         
     }
     
@@ -613,6 +654,220 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
 
         
     }
+
+    @IBAction func onTapSlowThreeX(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "finalVideo")
+        
+        self.btnSlowThreeX.backgroundColor = .white
+        self.btnSlowThreeX.layer.cornerRadius = 5
+        self.btnSlowThreeX.setTitleColor(.black, for: .normal)
+        self.btnSlowTwoX.backgroundColor = .black
+        self.btnSlowTwoX.layer.cornerRadius = 0
+        self.btnSlowTwoX.setTitleColor(.white, for: .normal)
+        self.btnOneX.backgroundColor = .black
+        self.btnOneX.layer.cornerRadius = 0
+        self.btnOneX.setTitleColor(.white, for: .normal)
+        self.btnFastTwoX.backgroundColor = .black
+        self.btnFastTwoX.layer.cornerRadius = 0
+        self.btnFastTwoX.setTitleColor(.white, for: .normal)
+        self.btnFastThreeX.backgroundColor = .black
+        self.btnFastThreeX.layer.cornerRadius = 0
+        self.btnFastThreeX.setTitleColor(.white, for: .normal)
+        if myVideoURL != nil{
+        VSVideoSpeeder.shared.scaleAsset(fromURL: myVideoURL, by: 3, withMode: SpeedoMode.Slower) { (exporter) in
+             if let exporter = exporter {
+                 switch exporter.status {
+                        case .failed: do {
+                              print(exporter.error?.localizedDescription ?? "Error in exporting..")
+                        }
+                        case .completed: do {
+                              print("Scaled video has been generated successfully!")
+                        }
+                        case .unknown: break
+                        case .waiting: break
+                        case .exporting: break
+                        case .cancelled: break
+                   }
+              }
+              else {
+                   /// Error
+                   print("Exporter is not initialized.")
+              }
+        }
+        }
+            videoSpeed = 0.3
+    }
+    
+    @IBAction func onTapSlowTwoX(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "finalVideo")
+        
+        self.btnSlowThreeX.backgroundColor = .black
+        self.btnSlowThreeX.layer.cornerRadius = 0
+        self.btnSlowThreeX.setTitleColor(.white, for: .normal)
+        self.btnSlowTwoX.backgroundColor = .white
+        self.btnSlowTwoX.layer.cornerRadius = 5
+        self.btnSlowTwoX.setTitleColor(.black, for: .normal)
+        self.btnOneX.backgroundColor = .black
+        self.btnOneX.layer.cornerRadius = 0
+        self.btnOneX.setTitleColor(.white, for: .normal)
+        self.btnFastTwoX.backgroundColor = .black
+        self.btnFastTwoX.layer.cornerRadius = 0
+        self.btnFastTwoX.setTitleColor(.white, for: .normal)
+        self.btnFastThreeX.backgroundColor = .black
+        self.btnFastThreeX.layer.cornerRadius = 0
+        self.btnFastThreeX.setTitleColor(.white, for: .normal)
+        
+        if myVideoURL != nil{
+        VSVideoSpeeder.shared.scaleAsset(fromURL: myVideoURL, by: 2, withMode: SpeedoMode.Slower) { (exporter) in
+             if let exporter = exporter {
+                 switch exporter.status {
+                        case .failed: do {
+                              print(exporter.error?.localizedDescription ?? "Error in exporting..")
+                        }
+                        case .completed: do {
+                              print("Scaled video has been generated successfully!")
+                        }
+                        case .unknown: break
+                        case .waiting: break
+                        case .exporting: break
+                        case .cancelled: break
+                   }
+              }
+              else {
+                   /// Error
+                   print("Exporter is not initialized.")
+              }
+            }}
+            videoSpeed = 0.2
+    }
+    
+    @IBAction func onTapOneX(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "finalVideo")
+        
+              self.btnSlowThreeX.backgroundColor = .black
+              self.btnSlowThreeX.layer.cornerRadius = 0
+              self.btnSlowThreeX.setTitleColor(.white, for: .normal)
+              self.btnSlowTwoX.backgroundColor = .black
+              self.btnSlowTwoX.layer.cornerRadius = 0
+              self.btnSlowTwoX.setTitleColor(.white, for: .normal)
+              self.btnOneX.backgroundColor = .white
+              self.btnOneX.layer.cornerRadius = 5
+              self.btnOneX.setTitleColor(.black, for: .normal)
+              self.btnFastTwoX.backgroundColor = .black
+              self.btnFastTwoX.layer.cornerRadius = 0
+              self.btnFastTwoX.setTitleColor(.white, for: .normal)
+              self.btnFastThreeX.backgroundColor = .black
+              self.btnFastThreeX.layer.cornerRadius = 0
+              self.btnFastThreeX.setTitleColor(.white, for: .normal)
+              
+        if myVideoURL != nil{
+        VSVideoSpeeder.shared.scaleAsset(fromURL: myVideoURL, by: 1, withMode: SpeedoMode.Faster) { (exporter) in
+             if let exporter = exporter {
+                 switch exporter.status {
+                        case .failed: do {
+                              print(exporter.error?.localizedDescription ?? "Error in exporting..")
+                        }
+                        case .completed: do {
+                              print("Scaled video has been generated successfully!")
+                        }
+                        case .unknown: break
+                        case .waiting: break
+                        case .exporting: break
+                        case .cancelled: break
+                   }
+              }
+              else {
+                   /// Error
+                   print("Exporter is not initialized.")
+              }
+            }}
+            videoSpeed = 1.0
+       }
+    
+    @IBAction func onTapFastTwoX(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "finalVideo")
+        
+        self.btnSlowThreeX.backgroundColor = .black
+              self.btnSlowThreeX.layer.cornerRadius = 0
+              self.btnSlowThreeX.setTitleColor(.white, for: .normal)
+              self.btnSlowTwoX.backgroundColor = .black
+              self.btnSlowTwoX.layer.cornerRadius = 0
+              self.btnSlowTwoX.setTitleColor(.white, for: .normal)
+              self.btnOneX.backgroundColor = .black
+              self.btnOneX.layer.cornerRadius = 0
+              self.btnOneX.setTitleColor(.white, for: .normal)
+              self.btnFastTwoX.backgroundColor = .white
+              self.btnFastTwoX.layer.cornerRadius = 5
+              self.btnFastTwoX.setTitleColor(.black, for: .normal)
+              self.btnFastThreeX.backgroundColor = .black
+              self.btnFastThreeX.layer.cornerRadius = 0
+              self.btnFastThreeX.setTitleColor(.white, for: .normal)
+              
+        if myVideoURL != nil{
+        VSVideoSpeeder.shared.scaleAsset(fromURL: myVideoURL, by: 2, withMode: SpeedoMode.Faster) { (exporter) in
+             if let exporter = exporter {
+                 switch exporter.status {
+                        case .failed: do {
+                              print(exporter.error?.localizedDescription ?? "Error in exporting..")
+                        }
+                        case .completed: do {
+                              print("Scaled video has been generated successfully!")
+                        }
+                        case .unknown: break
+                        case .waiting: break
+                        case .exporting: break
+                        case .cancelled: break
+                   }
+              }
+              else {
+                   /// Error
+                   print("Exporter is not initialized.")
+              }
+            }}
+            videoSpeed = 2.0
+       }
+    
+    @IBAction func onTapFastThreeX(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "finalVideo")
+        self.btnSlowThreeX.backgroundColor = .black
+              self.btnSlowThreeX.layer.cornerRadius = 0
+        self.btnSlowThreeX.setTitleColor(.white, for: .normal)
+              self.btnSlowTwoX.backgroundColor = .black
+              self.btnSlowTwoX.layer.cornerRadius = 0
+              self.btnSlowTwoX.setTitleColor(.white, for: .normal)
+              self.btnOneX.backgroundColor = .black
+              self.btnOneX.layer.cornerRadius = 0
+              self.btnOneX.setTitleColor(.white, for: .normal)
+              self.btnFastTwoX.backgroundColor = .black
+              self.btnFastTwoX.layer.cornerRadius = 0
+              self.btnFastTwoX.setTitleColor(.white, for: .normal)
+              self.btnFastThreeX.backgroundColor = .white
+              self.btnFastThreeX.layer.cornerRadius = 5
+              self.btnFastThreeX.setTitleColor(.black, for: .normal)
+              
+        if myVideoURL != nil{
+        VSVideoSpeeder.shared.scaleAsset(fromURL: myVideoURL, by: 3, withMode: SpeedoMode.Faster) { (exporter) in
+             if let exporter = exporter {
+                 switch exporter.status {
+                        case .failed: do {
+                              print(exporter.error?.localizedDescription ?? "Error in exporting..")
+                        }
+                        case .completed: do {
+                              print("Scaled video has been generated successfully!")
+                        }
+                        case .unknown: break
+                        case .waiting: break
+                        case .exporting: break
+                        case .cancelled: break
+                   }
+              }
+              else {
+                   /// Error
+                   print("Exporter is not initialized.")
+              }
+            }}
+            videoSpeed = 3.0
+       }
 
     func applySpeed(url:URL){
         UserDefaults.standard.set(nil, forKey: "finalVideo")

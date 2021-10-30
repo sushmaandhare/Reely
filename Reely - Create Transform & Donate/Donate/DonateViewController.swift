@@ -32,10 +32,15 @@ class DonateViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func NotificationBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let yourVC: NotificationsViewController = storyboard.instantiateViewController(withIdentifier: "NotificationsViewController") as! NotificationsViewController
+        self.navigationController?.pushViewController(yourVC, animated: true)
     }
     
     @IBAction func ProfileBtnAction(_ sender: UIButton) {
+        
     }
+    
     func DonateListApiCall(){
         
             let url : String = self.appDelegate.baseUrl!+self.appDelegate.donateTeamList!

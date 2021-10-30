@@ -18,6 +18,6 @@ target 'Reely - Create Transform & Donate' do
     pod 'ImageSlideshow', '~> 1.9.0'
     pod 'SDWebImage'
     pod 'MBCircularProgressBar'
-    
+    pod 'SwiftVideoGenerator'
     
 end

@@ -54,6 +54,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func NotificationBtnAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let yourVC: NotificationsViewController = storyboard.instantiateViewController(withIdentifier: "NotificationsViewController") as! NotificationsViewController
+        self.navigationController?.pushViewController(yourVC, animated: true)
     }
     
     @IBAction func MsgBtnAction(_ sender: Any) {
@@ -417,6 +420,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeVideoCollectionViewCell", for: indexPath) as? HomeVideoCollectionViewCell {
             cell.homeMsg = self.homeModel?.msg?[indexPath.item]
+            cell.btnPayView.setImage(UIImage(named: "ic_play"), for: .normal)
+            cell.btnPayView.isHidden = true
+            cell.btnPayView.tag = indexPath.row
+           
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+            cell.viewInnerView.addGestureRecognizer(tap)
+            cell.viewInnerView.isUserInteractionEnabled = true
+            cell.viewInnerView.tag = indexPath.item
+            
             cell.callBack = { (isLiked: Bool) in
                 if isLiked {
                     let count = (Int(self.homeModel?.msg?[indexPath.item].count?.like_count ?? "0") ?? 0) + 1
@@ -465,6 +477,33 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         }
         return UICollectionViewCell(frame: .zero)
+    }
+    
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        
+        
+        let myview = sender.view
+        let buttonTag = myview?.tag
+        let indexPath = IndexPath(row: buttonTag!, section: 0)
+        let cell = homeVideoCollectionView.cellForItem(at: indexPath) as! HomeVideoCollectionViewCell
+        cell.btnPayView.isHidden = false
+        if(cell.btnPayView.currentImage == UIImage(named: "ic_play")){ //play
+            
+            
+            cell.btnPayView.setImage( UIImage(named: "ic_pause"), for: .normal) //pause
+            cell.player?.pause()
+
+        }else if(cell.btnPayView.currentImage == UIImage(named: "ic_pause")){ //pause
+      
+                
+                cell.btnPayView.setImage( UIImage(named: "ic_play"), for: .normal) //play
+                cell.player?.play()
+                cell.btnPayView.isHidden = true
+        
+        }
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -86,6 +86,7 @@ PODS:
   - SDWebImage (4.4.8):
     - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
+  - SwiftVideoGenerator (1.4.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -99,6 +100,7 @@ DEPENDENCIES:
   - MBCircularProgressBar
   - SDWebImage
   - SDWebImage (~> 4.0)
+  - SwiftVideoGenerator
 
 SPEC REPOS:
   trunk:
@@ -125,6 +127,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SDWebImage
+    - SwiftVideoGenerator
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -150,7 +153,8 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SwiftVideoGenerator: 804637c18f68a4f205d806e305ebceb4adcf3d25
 
-PODFILE CHECKSUM: 8d1f16491ceef69aa7b3dc7f94d2a5895e42971a
+PODFILE CHECKSUM: bff3dcaac8efa0cabaaa8d5c23ba10dc5ad77714
 
 COCOAPODS: 1.10.0

@@ -54,7 +54,7 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBAction func onTapCreate(_ sender: UIButton) {
         print(self.selectedImg)
-        guard txtAbout.text != "" && txtFunds.text != "" && txtTeamName.text != "" && txtDate.text != ""  else{
+        guard txtAbout.text != "" && txtFunds.text != "" && txtTeamName.text != "" && txtDate.text != ""  && selectedImg != nil else{
             Alert(title: "Alert", msg: "All fields are mandatory")
            return
         }

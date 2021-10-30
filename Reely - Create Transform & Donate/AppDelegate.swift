@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var discover_details: String? = "discover_details"
     var follow_users: String? = "follow_users"
     var donateTeamList:String? = "donatePageListing"
+    var getNotifications:String? = "getNotifications"
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

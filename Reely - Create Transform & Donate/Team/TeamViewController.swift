@@ -36,12 +36,15 @@ class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     @IBAction func NotificationBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let yourVC: NotificationsViewController = storyboard.instantiateViewController(withIdentifier: "NotificationsViewController") as! NotificationsViewController
+        self.navigationController?.pushViewController(yourVC, animated: true)
     }
-    
     
     
     @IBAction func ProfileBtnAction(_ sender: UIButton) {
     }
+    
     @IBAction func JoinTeamBtnAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let yourVC: TeamListVC = storyboard.instantiateViewController(withIdentifier: "TeamListVC") as! TeamListVC
