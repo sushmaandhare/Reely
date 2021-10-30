@@ -6829,20 +6829,20 @@ Enjoy videos</string>
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create" translatesAutoresizingMaskIntoConstraints="NO" id="T4W-Iy-4AC">
-                                                                    <rect key="frame" x="10" y="5" width="80" height="119"/>
+                                                                    <rect key="frame" x="10" y="24.5" width="80" height="80"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="80" id="Qmp-Kp-cVZ"/>
-                                                                        <constraint firstAttribute="width" constant="80" id="bO0-3D-PeP"/>
+                                                                        <constraint firstAttribute="width" constant="80" id="Txi-tw-MCh"/>
+                                                                        <constraint firstAttribute="width" secondItem="T4W-Iy-4AC" secondAttribute="height" multiplier="1:1" id="v2t-XM-cyk"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsE-7t-oN6">
-                                                                    <rect key="frame" x="105" y="10" width="254" height="18"/>
+                                                                    <rect key="frame" x="105" y="24.5" width="254" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pB-ie-PsT">
-                                                                    <rect key="frame" x="105" y="38" width="254" height="17"/>
+                                                                    <rect key="frame" x="105" y="52.5" width="254" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -6851,14 +6851,13 @@ Enjoy videos</string>
                                                             <color key="backgroundColor" red="0.22785055639999999" green="0.16841170189999999" blue="0.280631721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="zsE-7t-oN6" firstAttribute="leading" secondItem="T4W-Iy-4AC" secondAttribute="trailing" constant="15" id="1Ja-LU-Yuz"/>
-                                                                <constraint firstItem="zsE-7t-oN6" firstAttribute="top" secondItem="5xS-JI-bsr" secondAttribute="top" constant="10" id="63k-Nc-lSd"/>
-                                                                <constraint firstItem="T4W-Iy-4AC" firstAttribute="top" secondItem="5xS-JI-bsr" secondAttribute="top" constant="5" id="9Zz-c4-0DO"/>
-                                                                <constraint firstAttribute="bottom" secondItem="T4W-Iy-4AC" secondAttribute="bottom" constant="5" id="G7d-uW-vqf"/>
+                                                                <constraint firstItem="T4W-Iy-4AC" firstAttribute="centerY" secondItem="5xS-JI-bsr" secondAttribute="centerY" id="8si-Tv-Prw"/>
                                                                 <constraint firstItem="3pB-ie-PsT" firstAttribute="top" secondItem="zsE-7t-oN6" secondAttribute="bottom" constant="10" id="SOx-YV-6ko"/>
                                                                 <constraint firstAttribute="trailing" secondItem="3pB-ie-PsT" secondAttribute="trailing" constant="15" id="WAM-qu-NbE"/>
                                                                 <constraint firstItem="T4W-Iy-4AC" firstAttribute="leading" secondItem="5xS-JI-bsr" secondAttribute="leading" constant="10" id="Wo6-s3-whC"/>
                                                                 <constraint firstItem="3pB-ie-PsT" firstAttribute="leading" secondItem="T4W-Iy-4AC" secondAttribute="trailing" constant="15" id="oAT-9b-k1F"/>
                                                                 <constraint firstAttribute="trailing" secondItem="zsE-7t-oN6" secondAttribute="trailing" constant="15" id="rUD-LL-4pG"/>
+                                                                <constraint firstItem="zsE-7t-oN6" firstAttribute="top" secondItem="T4W-Iy-4AC" secondAttribute="top" id="wIW-DT-ydV"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -9941,8 +9940,8 @@ Enjoy videos</string>
         <image name="team_white" width="30" height="30"/>
         <image name="text" width="30" height="30"/>
         <image name="tickmark.png" width="192" height="192"/>
-        <image name="timer" catalog="system" width="128" height="121"/>
         <image name="timer" width="30" height="30"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <image name="timer_img" width="30" height="30"/>
         <image name="upload" width="30" height="30"/>
         <image name="verify" width="30" height="30"/>
