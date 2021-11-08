@@ -336,6 +336,37 @@ class HomeViewController: UIViewController {
 //            }
 //        })
     }
+    
+    func DailyAppVisit(){
+        var deviceID = ""
+        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
+            deviceID = uuid
+        }
+        
+        let url : String = self.appDelegate.baseUrl!+self.appDelegate.DailyAppVisit!
+        
+        let parameter :[String:Any]? = ["fb_id":UserDefaults.standard.string(forKey: "uid") ?? "", "middle_name": self.appDelegate.middle_name]
+        
+        let headers: HTTPHeaders = [
+            "api-key": "4444-3333-2222-1111"
+        ]
+  
+        AF.request(url, method: .post, parameters: parameter, encoding:JSONEncoding.default, headers:headers).validate().responseJSON(completionHandler: {
+            
+            respones in
+            
+            switch respones.result {
+            case .success( let value):
+                let json  = value
+           
+              //  print(json)
+            
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
