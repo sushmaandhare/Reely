@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var follow_users: String? = "follow_users"
     var donateTeamList:String? = "donatePageListing"
     var getNotifications:String? = "getNotifications"
-    
+    var DailyAppVisit: String? = "DailyAppVisit"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -422,25 +422,25 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.present(vc, animated: true, completion: nil)
     }
     @IBAction func reverseAction(_ sender: UITapGestureRecognizer) {
-//        self.isReverse = true
-//        if let videoURL1 = self.myVideoURL {
-//         // LoadingView.lockView()
-//          VideoGenerator.fileName = "ReversedMovieFileName"
-//            VideoGenerator.current.reverseVideo(fromVideo: videoURL1 ) { result in
-//
-//                print(result)
-//
-//                switch result{
-//                case .success(let reverseVideo):
-//                    print(reverseVideo)
-//                    //UserDefaults.standard.setValue(reverseVideo, forKey: "finalVideo")
-//                case .failure(let error):
-//                        print(error.localizedDescription)
-//                    }
-//            }
-//
-//        }
-        self.Alert(title: "Coming Soon", msg: "Functionality under progress")
+        self.isReverse = true
+        if let videoURL1 = self.myVideoURL {
+         // LoadingView.lockView()
+          VideoGenerator.fileName = "ReversedMovieFileName"
+            VideoGenerator.current.reverseVideo(fromVideo: videoURL1 ) { result in
+
+                print(result)
+
+                switch result{
+                case .success(let reverseVideo):
+                    print(reverseVideo)
+                    //UserDefaults.standard.setValue(reverseVideo, forKey: "finalVideo")
+                case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+            }
+
+        }
+  //      self.Alert(title: "Coming Soon", msg: "Functionality under progress")
     }
     
     func Alert(title: String, msg: String){
@@ -457,7 +457,12 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func speedButtonTapped(_ sender: UITapGestureRecognizer)
     {
 
-        self.Alert(title: "Coming Soon", msg: "Functionality under progress")
+        speedView.isHidden = false
+        btnSlowTwoX.isHidden = false
+        btnSlowThreeX.isHidden = false
+        btnOneX.isHidden = false
+        btnFastTwoX.isHidden = false
+        btnFastThreeX.isHidden = false
         
     }
     
@@ -516,11 +521,11 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc: PreviewVC = storyboard.instantiateViewController(withIdentifier: "PreviewVC") as! PreviewVC
                 vc.myPlayer = player
-//                   if UserDefaults.standard.url(forKey: "finalVideo") != nil{
-//                      vc.myVideoURL = UserDefaults.standard.url(forKey: "finalVideo")
-//                   }else{
+                   if UserDefaults.standard.url(forKey: "finalVideo") != nil{
+                      vc.myVideoURL = UserDefaults.standard.url(forKey: "finalVideo")
+                   }else{
                   vc.myVideoURL = videoURL
-//                   }
+                   }
 
 
                 //vc.modalPresentationStyle = .fullScreen

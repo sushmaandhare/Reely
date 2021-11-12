@@ -3460,6 +3460,7 @@ Enjoy videos</string>
                         <outlet property="reverseLbl" destination="qcI-2X-xHR" id="srm-Hw-gFp"/>
                         <outlet property="speedImgView" destination="fwF-hb-l4a" id="rae-3V-9jR"/>
                         <outlet property="speedLabel" destination="Guj-GR-g6H" id="aT8-A4-CvP"/>
+                        <outlet property="speedView" destination="Xrw-jF-8Ai" id="Kxz-gO-FfW"/>
                         <outlet property="timerImgView" destination="rdM-Jk-fiN" id="E98-Ic-1Wm"/>
                         <outlet property="timerLabel" destination="V1c-cl-QMA" id="zhw-jV-86q"/>
                     </connections>
