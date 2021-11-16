@@ -107,8 +107,13 @@ extension HashTagViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "VideoPlayerVC") as? VideoPlayerVC {
-            controller.selectedVideo = self.hashTagModel?.msg?.first?.sections_videos?[indexPath.item]
+//        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "VideoPlayerVC") as? VideoPlayerVC {
+//            controller.selectedVideo = self.hashTagModel?.msg?.first?.sections_videos?[indexPath.item]
+//            self.navigationController?.pushViewController(controller, animated: true)
+//        }
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewAllHorizontalCollectionVC") as? ViewAllHorizontalCollectionVC {
+            controller.sections_videos = self.hashTagModel?.msg?.first?.sections_videos
+            controller.selectedIndex = indexPath.item
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }

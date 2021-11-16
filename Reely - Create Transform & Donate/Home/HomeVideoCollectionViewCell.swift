@@ -85,7 +85,7 @@ class HomeVideoCollectionViewCell: UICollectionViewCell {
             }
             
             if let str = self.homeMsg?.user_info?.profile_pic {
-                self.imgProfile.sd_setImage(with: URL(string: str), placeholderImage: UIImage(), options: SDWebImageOptions.continueInBackground, completed: nil)
+                self.imgProfile.sd_setImage(with: URL(string: str), placeholderImage: UIImage(named: "profile"), options: SDWebImageOptions.continueInBackground, completed: nil)
             }
             
             self.lblLikeCount.text = self.homeMsg?.count?.like_count ?? "0"

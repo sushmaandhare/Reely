@@ -83,17 +83,17 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
 //                                self.totalLikeCount = total_like_count
                                 let activity_info = Dict["activity_info"] as! NSDictionary
                                
-                                let activity_name = activity_info["activity_name"] as! String
-                                let activityDesc = activity_info["description"] as! String
-                                let activity_image = activity_info["activity_image"] as! String
-                                let fund_raise = activity_info["fund_raise"] as! String
-                                let last_date = activity_info["last_date"] as! String
-                                let joined_members = activity_info["joined_members"] as! String
-                                let is_verified = activity_info["is_verified"] as! String
+                                let activity_name = activity_info["activity_name"] as? String
+                                let activityDesc = activity_info["description"] as? String
+                                let activity_image = activity_info["activity_image"] as? String
+                                let fund_raise = activity_info["fund_raise"] as? String
+                                let last_date = activity_info["last_date"] as? String
+                                let joined_members = activity_info["joined_members"] as? String
+                                let is_verified = activity_info["is_verified"] as? String
                                // let fund_donate = activity_info["fund_donate"] as! String
-                                let created_by = activity_info["created_by"] as! String
-                                let creator_pic = activity_info["creator_pic"] as! String
-                                let days_left = activity_info["days_left"] as! String
+                                let created_by = activity_info["created_by"] as? String
+                                let creator_pic = activity_info["creator_pic"] as? String
+                                let days_left = activity_info["days_left"] as? String
                               
                                if let user_videos = Dict["user_videos"] as? [[String:Any]]{
                              print(user_videos)
@@ -195,6 +195,7 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let yourVC: TeamMemberListVC = storyboard.instantiateViewController(withIdentifier: "TeamMemberListVC") as! TeamMemberListVC
         yourVC.activityId = self.activityId
+        
         self.navigationController?.pushViewController(yourVC, animated: true)
     }
     
@@ -202,6 +203,7 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let yourVC: FundDonateListVC = storyboard.instantiateViewController(withIdentifier: "FundDonateListVC") as! FundDonateListVC
         yourVC.activityId = self.activityId
+        yourVC.desc = lblTeamDesc.text ?? ""
         self.navigationController?.pushViewController(yourVC, animated: true)
     }
     

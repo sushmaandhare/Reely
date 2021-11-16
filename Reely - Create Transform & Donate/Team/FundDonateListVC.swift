@@ -15,6 +15,7 @@ class FundDonateListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var totalJoinedMember = "0"
     var totalPoints = "0"
     var activityId : String! = ""
+    var desc = ""
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -54,10 +55,10 @@ class FundDonateListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                 let dic = json as! NSDictionary
                 let code = dic["code"] as! NSString
                 let total = dic["total_joined_members"] as! NSString
-                guard total != "0" else {
-                    self.Alert(title: "No Members", msg: "")
-                    return
-                }
+//                guard total != "0" else {
+//                    self.Alert(title: "No Members", msg: "")
+//                    return
+//                }
                 if(code == "200"){
                     
                     if let myCountry = dic["msg"] as? [[String:Any]]{
@@ -143,9 +144,10 @@ class FundDonateListVC: UIViewController, UITableViewDelegate, UITableViewDataSo
                             self.totalPoints = points
                             
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let yourVC: FundDonateListVC = storyboard.instantiateViewController(withIdentifier: "FundDonateListVC") as! FundDonateListVC
+                        let yourVC: ContributeVC = storyboard.instantiateViewController(withIdentifier: "ContributeVC") as! ContributeVC
                         yourVC.totalPoints = self.totalPoints
                         yourVC.activityId = self.activityId
+                        yourVC.desc = self.desc
                         self.navigationController?.pushViewController(yourVC, animated: true)
                         
                     }

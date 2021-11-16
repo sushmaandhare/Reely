@@ -12,6 +12,7 @@ class ContributeVC: UIViewController {
 
     var activityId : String! = ""
     var totalPoints = "0"
+    var desc = ""
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var lblDesc: UILabel!
@@ -35,6 +36,13 @@ class ContributeVC: UIViewController {
         guard txtPoints.text != "" else {
             return
         }
+        let totalpoints = (self.totalPoints as NSString).integerValue
+        let points = (txtPoints.text as! NSString).integerValue
+            
+        if totalpoints < points{
+           Alert(title: "Alert", msg: "Please enter points less than your points")
+        }else{
+       
         let url : String = self.appDelegate.baseUrl!+self.appDelegate.donateFundPoints!
         
         let parameter:[String:Any]?  = ["fb_id":UserDefaults.standard.string(forKey: "uid")!, "activity_id":self.activityId, "points": txtPoints.text]
@@ -84,7 +92,7 @@ class ContributeVC: UIViewController {
                 
             }
         })
-       
+        }
     }
     
     

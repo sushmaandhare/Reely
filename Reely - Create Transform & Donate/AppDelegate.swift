@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let signInConfig = GIDConfiguration.init(clientID: "866548814294-hrjk0hndqqs7tdu6u8h0ku9icugtscfc.apps.googleusercontent.com")
 //        UserDefaults.standard.set(signInConfig, forKey: "ClientId")
     
+        IQKeyboardManager.shared.enable = true
+
         ApplicationDelegate.shared.application(
                 application,
                 didFinishLaunchingWithOptions: launchOptions

@@ -118,6 +118,18 @@ struct User_info : Decodable {
         profile_pic = try values.decodeIfPresent(String.self, forKey: .profile_pic)
         username = try values.decodeIfPresent(String.self, forKey: .username)
     }
+    
+    func getFullName() -> String{
+        if let f_name = first_name, let l_name = last_name {
+            return f_name + l_name
+        }else if let f_name = first_name{
+            return f_name
+        } else if let l_name = last_name{
+            return l_name
+        }else {
+            return ""
+        }
+    }
 }
 
 struct SocialMediaModel : Decodable {

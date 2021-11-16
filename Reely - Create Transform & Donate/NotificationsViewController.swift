@@ -118,7 +118,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
         self.followImg.image = UIImage(named: "Follow inactive")
         self.shopImg.image = UIImage(named: "Shop inactive")
         self.teamImg.image = UIImage(named: "Team inactive")
-        self.apiCall(type: "ALL")
+        self.apiCall(type: "Donate")
     }
     
     @IBAction func TeamBtnAction(_ sender: UIButton) {

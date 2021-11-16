@@ -39,44 +39,47 @@ class UserProfileViewController: UIViewController, UICollectionViewDelegate, UIC
         profileImgView.clipsToBounds = true
         profileImgView.layer.borderWidth = 2.0
         profileImgView.layer.borderColor = UIColor.white.cgColor
+        
     }
     
     //MARK: Get all videos api
     func getVideos(offset: Int) {
-        let url : String = self.appDelegate.baseUrl!+self.appDelegate.showMyAllVideos!
+            let url : String = self.appDelegate.baseUrl!+self.appDelegate.showMyAllVideos!
 
-        let parameter :[String:Any]? = ["my_fb_id":UserDefaults.standard.string(forKey: "uid")!,"fb_id":UserDefaults.standard.string(forKey: "uid")!,"offset":"0"]
-        let headers: HTTPHeaders = ["api-key": "4444-3333-2222-1111"]
-        
-        //https://realtynextt.com/API/index.php?p=discover_new
-        Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).validate().responseData { [weak self] (responseData) in
-            switch responseData.result {
-            case .success(let json):
-                do {
-                    self?.videoModel = try JSONDecoder().decode(HomeModel.self, from: json)
-                    if let code = self?.videoModel?.code, (code == "200") {
-                        DispatchQueue.main.async {
-                            let name = (self?.videoMsg?.user_info?.first_name ?? "") + " " + (self?.videoMsg?.user_info?.last_name ?? "")
-                            self?.UserTypeLbl.text = self?.videoMsg?.user_info?.username ?? ""
-                            self?.UserNameLbl.text = name
-                            //self?.CoinLbl.text = name
-                            
-                            let str = "\(self?.videoMsg?.user_info?.profile_pic ?? "")friendship.png"
-                            #warning("temp added becuase URL from response is not completed.")
+            let parameter :[String:Any]? = ["my_fb_id":UserDefaults.standard.string(forKey: "uid")!,"fb_id":UserDefaults.standard.string(forKey: "uid")!,"offset":"0"]
+            let headers: HTTPHeaders = ["api-key": "4444-3333-2222-1111"]
+            
+            //https://realtynextt.com/API/index.php?p=discover_new
+            Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).validate().responseData { [weak self] (responseData) in
+                print(String.init(data: responseData.data!, encoding: .utf8))
+                switch responseData.result {
+                case .success(let json):
+                    do {
+                        self?.videoModel = try JSONDecoder().decode(HomeModel.self, from: json)
+                        if let code = self?.videoModel?.code, (code == "200") {
+                            DispatchQueue.main.async {
+                                let userName = self?.videoModel?.msg?.first?.user_info
+                                let name = (userName?.first_name ?? "") + " " + (userName?.last_name ?? "")
+                                self?.UserTypeLbl.text = userName?.username ?? ""
+                                self?.UserNameLbl.text = name
+                                //self?.CoinLbl.text = name
+                                
+                                let str = "\(userName?.profile_pic ?? "")friendship.png"
+                                #warning("temp added becuase URL from response is not completed.")
 
-                            self?.userImg.sd_setImage(with: URL(string: str), placeholderImage: UIImage(), options: SDWebImageOptions.continueInBackground, completed: nil)
-                            self?.createVdCollectionView.reloadData()
+                                self?.userImg.sd_setImage(with: URL(string: str), placeholderImage: UIImage(named:"create-1"), options: SDWebImageOptions.continueInBackground, completed: nil)
+                                self?.createVdCollectionView.reloadData()
+                            }
                         }
+                    } catch let error {
+                        print(error)
                     }
-                } catch let error {
+                case .failure(let error):
                     print(error)
+                    break
                 }
-            case .failure(let error):
-                print(error)
-                break
             }
         }
-    }
     
     func getAllVideos(offset1: Int){
 //        viewMyVideos.isHidden = true

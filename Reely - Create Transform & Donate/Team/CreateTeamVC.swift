@@ -23,11 +23,12 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
    
-    @IBOutlet weak var txtDate: UITextField!
     @IBOutlet weak var txtFunds: UITextField!
     @IBOutlet weak var txtAbout: UITextField!
     @IBOutlet weak var txtTeamName: UITextField!
-    
+    @IBOutlet weak var txtDate: UITextField!
+    var datePicker = UIDatePicker()
+
     var videoAndImageReview = UIImagePickerController()
     var selectedImg : UIImage?
     var selectedDate : Date?
@@ -46,16 +47,43 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         let dateStr = dateFormatter.string(from: date)
         
         txtDate.text = dateStr
-        
+        showDatePicker()
        
     }
     
-  
+    func showDatePicker(){
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker))
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+        txtDate.inputAccessoryView = toolbar
+        txtDate.inputView = datePicker
+    }
     
+    @objc func donedatePicker(){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        txtDate.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+    }
+ 
     @IBAction func onTapCreate(_ sender: UIButton) {
         print(self.selectedImg)
-        guard txtAbout.text != "" && txtFunds.text != "" && txtTeamName.text != "" && txtDate.text != ""  && selectedImg != nil else{
+        guard txtAbout.text != "" && txtFunds.text != "" && txtTeamName.text != "" && txtDate.text != "" else{
             Alert(title: "Alert", msg: "All fields are mandatory")
+           return
+        }
+        
+        guard selectedImg != nil else{
+            Alert(title: "Alert", msg: "Please upload profile Image")
            return
         }
         

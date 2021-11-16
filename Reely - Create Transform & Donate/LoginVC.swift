@@ -63,27 +63,21 @@ class LoginVC: UIViewController {
     
 
     @IBAction func loginWithFbBtnAction(_ sender: UIButton) {
-        
         let fbLoginManager : LoginManager = LoginManager()
         fbLoginManager.logIn(permissions: ["email"], from: self) { (result, error) in
             if (error == nil){
                 let fbloginresult : LoginManagerLoginResult = result!
                 if fbloginresult.grantedPermissions != nil {
-                    if(fbloginresult.grantedPermissions.contains("email"))
-                    {
+                    if(fbloginresult.grantedPermissions.contains("email")){
                         self.getFBUserData()
-                        
-                        
                     }
                 }
             }
         }
-        
     }
     
     
     func getFBUserData(){
-        
         if((AccessToken.current) != nil){
             GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email,age_range"]).start(completion: { (connection, result, error) -> Void in
                 if (error == nil){

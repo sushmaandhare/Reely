@@ -17,7 +17,7 @@ class TeamDetailsVC: UIViewController {
     @IBOutlet weak var lblTeamDesc: UITextView!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var lblProgress: UILabel!
-    @IBOutlet weak var imgView: UIImageView!
+
     @IBOutlet weak var lblSubscriber: UILabel!
     @IBOutlet weak var lblCreatedBy: UILabel!
     @IBOutlet weak var lblDaysLeft: UILabel!

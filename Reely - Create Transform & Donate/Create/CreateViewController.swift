@@ -457,6 +457,9 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func speedButtonTapped(_ sender: UITapGestureRecognizer)
     {
 
+//        guard self.myVideoURL != nil else {
+//            return Alert(title: "", msg: "Please capture video for applying speed.")
+//        }
         speedView.isHidden = false
         btnSlowTwoX.isHidden = false
         btnSlowThreeX.isHidden = false
@@ -555,15 +558,15 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         let asset   = AVURLAsset.init(url: url as URL)
 //        print("mediaType 11----\(mediaType)")
-//        print("url 11----\(url)")
-        let player = AVPlayer(url: url)
+        print("url 11----\(url)")
+        
+        
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: PreviewVC = storyboard.instantiateViewController(withIdentifier: "PreviewVC") as! PreviewVC
-        vc.myVideoURL = url
-        vc.myPlayer = player
-//        vc.asset = asset
-//        vc.speed = videoSpeed
-        //vc.delegate = self
+        let vc: TrimmerViewController = storyboard.instantiateViewController(withIdentifier: "TrimmerViewController") as! TrimmerViewController
+        vc.url = url as NSURL
+        vc.asset = asset
+        vc.speed = videoSpeed
+        vc.isReverse = self.isReverse
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
