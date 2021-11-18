@@ -37,12 +37,17 @@ class HomeViewController: UIViewController {
         self.homeVideoCollectionView.delegate = self
         self.homeVideoCollectionView.dataSource = self
         callHomeAPI()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.successVideoUpload(_ :)), name: Notification.Name("uploadvideo"), object: nil)
+    }
+    
+    @objc func successVideoUpload(_ center: NotificationCenter){
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("uploadvideo"), object: nil)
+        callHomeAPI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
-
     }
     
     private func callHomeAPI() {
@@ -82,19 +87,15 @@ class HomeViewController: UIViewController {
     }
     
     func HomeVideoApi(offset: Int?){
-        // let  sv = HomeViewController.displaySpinner(onView: self.view)
         
         let url : String = self.appDelegate.baseUrl!+self.appDelegate.showAllVideos!
-        
-      //  let udid = UIDevice.current.identifierForVendor?.uuidString
-        
+                
         let parameter:[String:Any]?  = ["fb_id":UserDefaults.standard.string(forKey: "uid")!,"videos_id":"","offset": "0","type":"related"]
         
         let headers: HTTPHeaders = [
             "api-key": "4444-3333-2222-1111"
         ]
         
-        //"https://realtynextt.com/API/index.php?p=showAllVideosNew"
         Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).validate().responseData { [weak self] (responseData) in
             switch responseData.result {
             case .success(let json):
@@ -113,106 +114,16 @@ class HomeViewController: UIViewController {
                 break
             }
         }
-
-//        Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).validate().responseJSON(completionHandler: {
-//            respones in
-//            print(String.init(data: respones.data!, encoding: .utf8))
-//            switch respones.result {
-//
-//            case .success( let json):
-//
-//
-//
-//
-//                let dic = json as! NSDictionary
-//                let code = dic["code"] as! NSString
-//
-//                if(code == "200"){
-//                    if let count = dic["total_video_count"] as? String{
-//                        self.totalVideoCount = Int(count) ?? 0
-//                        print(self.totalVideoCount)
-//                    }
-//
-//
-//                    let myCountry = (dic["msg"] as? [[String:Any]])!
-//                    //                 print("video count",myCountry.count)
-//                    for Dict in myCountry {
-//
-//                        let myRestaurant = Dict as NSDictionary
-//
-//                        let count = myRestaurant["count"] as! NSDictionary
-//                        let Username = myRestaurant["user_info"] as! NSDictionary
-//                        let sound = myRestaurant["sound"] as! NSDictionary
-//                        let sound_id = sound["id"] as? String
-//                        let audio_patha = sound["audio_path"] as! NSDictionary
-//                        let audio_path:String! =   audio_patha["acc"] as? String
-//                        //                    let obj1 = SoundObj(sound_id: sound_id, audioUrl: audio_path)
-//                        //                    self.sound_array.add(obj1)
-//
-//                        let shareCount = count["share"] as? String
-//                        let like_count = count["like_count"] as? String
-//
-//                        let video_comment_count = count["video_comment_count"] as? String
-//                        let view_count = count["view"] as? String
-//
-//                        let sound_name = sound["sound_name"] as? String
-//                        let video_url:String! =   myRestaurant["video"] as? String
-//                        //                        let video_url = "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4"
-//
-//                        let u_id:String! =   myRestaurant["fb_id"] as? String
-//                        let v_id:String! =   myRestaurant["id"] as? String
-//                        let thum:String! =   myRestaurant["thum"] as? String
-//                        let username:String! =   Username["username"] as? String
-//                        let last_name:String! =   Username["last_name"] as? String
-//                        let profile_pic:String! =   Username["profile_pic"] as? String
-//                        let like:String! =   myRestaurant["liked"] as? String
-//                        let isFollow:Int! = Dict["is_follow"] as? Int
-//                        let desc:String! =   myRestaurant["description"] as? String
-//                        let first_name:String! =   Username["first_name"] as? String
-//                        let allow_comment:String! =   myRestaurant["allow_comments"] as? String
-//                        let allow_duet:String! =   myRestaurant["allow_duet"] as? String
-//                        //    print("is follow",isFollow)
-//                        let obj = Home(like_count: like_count, video_comment_count: video_comment_count, sound_name: sound_name,thum: thum, first_name: first_name, last_name: last_name,profile_pic: profile_pic, video_url: video_url, v_id: v_id, u_id: u_id, like: like, desc: desc, username: username, view_count: view_count, allow_comment: allow_comment, allow_duet: allow_duet, isFollow: isFollow, share_count: shareCount, sound_id: sound_id ?? "0", sound_url: audio_path)
-//
-//                        self.homeArr.append(obj)
-//
-//
-//                    }
-//
-//                    self.getDiscoverVideos()
-//                }else{
-//
-//                    //  print(dic["msg"] as! String)
-//                    // self.alertModule(title:"Error", msg:dic["msg"] as! String)
-//
-//                }
-//
-//            case .failure(let error):
-//
-//                print(error.localizedDescription)
-//
-//            // HomeViewController.removeSpinner(spinner: sv)
-//            // self.alertModule(title:"Error",msg:error.localizedDescription)
-//
-//
-//            }
-//        })
-        
-        
-        
     }
 
     func getDiscoverVideos() {
-        
         let url : String = self.appDelegate.baseUrl!+self.appDelegate.discover!
-
         let parameter :[String:Any]? = ["fb_id":UserDefaults.standard.string(forKey: "uid")!,
                                         "middle_name":"osd191k3hEZm5PzMfoboJy5l466w7szI",
                                         "offset":"0",
                                         "section_id":"1"]
         let headers: HTTPHeaders = ["api-key": "4444-3333-2222-1111"]
         
-        //https://realtynextt.com/API/index.php?p=discover_new
         Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).validate().responseData { [weak self] (responseData) in
             switch responseData.result {
             case .success(let json):
@@ -231,142 +142,7 @@ class HomeViewController: UIViewController {
                 break
             }
         }
-        
-//        Alamofire.request(url, method: .post, parameters:parameter, encoding:JSONEncoding.default, headers:headers).validate().responseJSON(completionHandler: {
-//
-//            respones in
-//
-//            switch respones.result {
-//            case .success( let value):
-//
-//                let json  = value
-//
-////                self.hashArr.removeAll()
-////                self.video_array = []
-//                self.Newssection = []
-//                print(json)
-//                let dic = json as! NSDictionary
-//                let code = dic["code"] as! NSString
-//                if(code == "200"){
-//
-//                    if let myCountry = dic["msg"] as? NSArray{
-//                        for i in 0...myCountry.count-1{
-//
-//                            if  let sectionData = myCountry[i] as? NSDictionary{
-//
-//                                var tempMenuObj = Discover()
-//                                tempMenuObj.name = sectionData["section_name"] as? String
-//                                tempMenuObj.hashtagIcon = sectionData["section_icon"] as? String ?? " "
-//                                tempMenuObj.totalView = sectionData["section_views"] as! String
-//                                tempMenuObj.section_Id = sectionData["section_id"] as? String
-//                                self.Newssection.add(tempMenuObj.name!)
-//                               // self.hashArr.append(tempMenuObj.name!)
-//                                tempMenuObj.sectionInd = i
-//                                if let extraData = sectionData["sections_videos"] as? NSArray{
-//
-//                                    for j in 0...extraData.count-1{
-//
-//                                        let dic2 = extraData[j] as! [String:Any]
-//                                        var tempProductList = sectionVideos()
-//
-//                                        tempProductList.description = dic2["description"] as? String
-//
-//                                        if let count = dic2["count"] as? NSDictionary{
-//
-//                                            tempProductList.like_count = count["like_count"] as? String
-//
-//                                            tempProductList.view_count = count["view"] as? String
-//
-//                                            tempProductList.share = count["share"] as? String
-//                                        }
-//
-//                                        if let user_info = dic2["user_info"] as? NSDictionary{
-//
-//                                            tempProductList.username = user_info["username"] as? String ?? "No Name"
-//                                            tempProductList.first_name = user_info["first_name"] as? String ?? ""
-//                                            tempProductList.last_name = user_info["last_name"] as? String
-//
-//                                            tempProductList.profile_pic = user_info["profile_pic"] as? String
-//
-//                                            tempProductList.u_id = user_info["fb_id"] as? String
-//                                        }
-//
-//
-//                                        tempProductList.video = dic2["video"] as? String
-//                                        tempProductList.thum = dic2["thum"] as? String
-//                                        tempProductList.liked = dic2["liked"] as? String
-//                                        tempProductList.v_id = dic2["id"] as? String
-//
-//                                        if let sound = dic2["sound"] as? NSDictionary{
-//                                            let audio_patha = sound["audio_path"] as! NSDictionary
-//                                            tempProductList.sound_name = sound["sound_name"] as? String
-//                                            tempProductList.audio_url = audio_patha["acc"] as! String
-//                                            tempProductList.s_id = sound["id"] as? String
-//                                        }
-//
-//                                        tempMenuObj.listOfProducts.append(tempProductList)
-//
-//                                    }
-//
-//                                }
-//
-//                                self.video_array.append(tempMenuObj)
-//                                print(self.video_array.count)
-//                            }
-//
-//                        }
-//
-//                    }
-//
-//                    self.HomeTableView.delegate = self
-//                    self.HomeTableView.dataSource = self
-//                    self.HomeTableView.reloadData()
-//
-//                }else{
-//                    //self.refreshControl.endRefreshing()
-//
-//                }
-//
-//            case .failure(let error):
-//                print(error)
-//
-//                //self.tableview.hideLoading()
-//                //to hide the loader
-//
-//            }
-//        })
     }
-    
-//    func DailyAppVisit(){
-//        var deviceID = ""
-//        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
-//            deviceID = uuid
-//        }
-//        
-//        let url : String = self.appDelegate.baseUrl!+self.appDelegate.DailyAppVisit!
-//        
-//        let parameter :[String:Any]? = ["fb_id":UserDefaults.standard.string(forKey: "uid") ?? "", "middle_name": self.appDelegate.middle_name]
-//        
-//        let headers: HTTPHeaders = [
-//            "api-key": "4444-3333-2222-1111"
-//        ]
-//  
-//        AF.request(url, method: .post, parameters: parameter, encoding:JSONEncoding.default, headers:headers).validate().responseJSON(completionHandler: {
-//            
-//            respones in
-//            
-//            switch respones.result {
-//            case .success( let value):
-//                let json  = value
-//           
-//              //  print(json)
-//            
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        })
-//    }
-    
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
@@ -408,38 +184,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-//    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if let tvc = self.homeTableView.dequeueReusableCell(withIdentifier: "HomeVideoTVC") as? HomeVideoTVC{
-//            let visiblePaths = tvc.HomeVideoCV.indexPathsForVisibleItems
-//
-//            for i in visiblePaths  {
-//                let cell = tvc.HomeVideoCV.cellForItem(at: i) as? HomeVideoCollectionViewCell
-//            if keyPath == "timeControlStatus", let change = change, let newValue = change[NSKeyValueChangeKey.newKey] as? Int, let oldValue = change[NSKeyValueChangeKey.oldKey] as? Int {
-//                let oldStatus = AVPlayer.TimeControlStatus(rawValue: oldValue)
-//                let newStatus = AVPlayer.TimeControlStatus(rawValue: newValue)
-//                if newStatus != oldStatus {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {[weak self] in
-//                        if newStatus == .playing || oldStatus == .paused  {
-////                            cell?.progressView.signal()
-////                            cell?.progressView.isHidden = true
-//                           // cell?.player?.play()
-//                        } else {
-//
-////                             cell?.progressView.wait()
-////                            cell?.progressView.isHidden = false
-//                           // cell?.player?.pause()
-//
-//                        }
-//                    })
-//                }
-//            }
-//            }
-//        }
-//    }
-    
-   
-        
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

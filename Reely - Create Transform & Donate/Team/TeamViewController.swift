@@ -9,7 +9,11 @@ import UIKit
 import  Alamofire
 import SDWebImage
 
-class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CreateTeamVCDelegate {
+    func successfullTeamCreate() {
+        self.TeamListApiCall()
+    }
+    
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var TeamArray:[TeamList]=[]
@@ -56,6 +60,7 @@ class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let yourVC: CreateTeamVC = storyboard.instantiateViewController(withIdentifier: "CreateTeamVC") as! CreateTeamVC
         yourVC.modalPresentationStyle = .overCurrentContext
+        yourVC.delegate = self
         self.present(yourVC, animated: true, completion: nil)
     }
    

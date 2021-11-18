@@ -50,6 +50,7 @@
 		D03CCBFD272A905E002C6005 /* Notificaton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03CCBFC272A905E002C6005 /* Notificaton.swift */; };
 		D03CCBFF272AA6F9002C6005 /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03CCBFE272AA6F9002C6005 /* TimerVC.swift */; };
 		D068B9DF2743B5A800B477BC /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D068B9DE2743B5A800B477BC /* RangeSlider.swift */; };
+		D06E3D1A274617CB001B6C2B /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E3D19274617CB001B6C2B /* ProfileModel.swift */; };
 		D0C33E0626CE5F9E0043DBD3 /* VSVideoSpeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C33E0526CE5F9E0043DBD3 /* VSVideoSpeeder.swift */; };
 		D0C803AA270D89A100477AC4 /* TeamVideoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C803A9270D89A100477AC4 /* TeamVideoCVC.swift */; };
 		D0C803AC270DC0CD00477AC4 /* FundDonateListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C803AB270DC0CC00477AC4 /* FundDonateListVC.swift */; };
@@ -121,6 +122,7 @@
 		D03CCBFC272A905E002C6005 /* Notificaton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificaton.swift; sourceTree = "<group>"; };
 		D03CCBFE272AA6F9002C6005 /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		D068B9DE2743B5A800B477BC /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		D06E3D19274617CB001B6C2B /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		D0C33E0526CE5F9E0043DBD3 /* VSVideoSpeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSVideoSpeeder.swift; sourceTree = "<group>"; };
 		D0C803A9270D89A100477AC4 /* TeamVideoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamVideoCVC.swift; sourceTree = "<group>"; };
 		D0C803AB270DC0CC00477AC4 /* FundDonateListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDonateListVC.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				D0DA188927154BFF0010B143 /* HashTagModel.swift */,
 				D01D4ABD271ED3F500633537 /* DonateList.swift */,
 				D03CCBFC272A905E002C6005 /* Notificaton.swift */,
+				D06E3D19274617CB001B6C2B /* ProfileModel.swift */,
 			);
 			path = "Model Class";
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				04566E0A26B41D04003AD58D /* AppDelegate.swift in Sources */,
 				D0FBE855270C361300CDB00A /* CreateTeamVC.swift in Sources */,
 				D0FBE85B270C58EE00CDB00A /* TeamMemberListVC.swift in Sources */,
+				D06E3D1A274617CB001B6C2B /* ProfileModel.swift in Sources */,
 				D032C07126E77C4E00AA784B /* HomeCollectionViewCell.swift in Sources */,
 				D0EAFB4D26DA25BC00F770B9 /* VideoPlayerVC.swift in Sources */,
 				D0D10E8F26D656B900FC743E /* ProfileCVC.swift in Sources */,

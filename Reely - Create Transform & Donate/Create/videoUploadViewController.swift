@@ -266,7 +266,8 @@ class videoUploadViewController: UIViewController, HashTagListVCDelegate, Privac
             }else if response == "upload"{
                 UserDefaults.standard.set(true, forKey: "Upload")
                 self.navigationController?.popToRootViewController(animated: true)
-                
+                NotificationCenter.default.post(name: Notification.Name("uploadvideo"), object: nil)
+
                 //            self.dismiss(animated: true, completion: {
                 //            self.delegate?.DismissVC()
                 //         })

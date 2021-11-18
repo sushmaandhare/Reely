@@ -13,8 +13,13 @@ import AVKit
 import AVFoundation
 import CameraManager
 
+protocol CreateTeamVCDelegate : AnyObject {
+    func successfullTeamCreate()
+}
+
 class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, DatePickerVCDelegate, UITextFieldDelegate {
     
+    weak var delegate : CreateTeamVCDelegate?
     func DismissVC(date: Date?) {
         self.selectedDate = date
     }
@@ -82,10 +87,10 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
            return
         }
         
-        guard selectedImg != nil else{
-            Alert(title: "Alert", msg: "Please upload profile Image")
-           return
-        }
+//        guard selectedImg != nil else{
+//            Alert(title: "Alert", msg: "Please upload profile Image")
+//           return
+//        }
         
         createTeamApiCall()
     }
@@ -131,8 +136,9 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     let code = dic["code"] as! NSString
                     
                     if(code == "200"){
-                        
-                        self.dismiss(animated: true, completion: nil)
+                        self.dismiss(animated: true, completion: { [weak self] in
+                            self?.delegate?.successfullTeamCreate()
+                        })
                     
                 }else{
                     

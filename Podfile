@@ -19,5 +19,8 @@ target 'Reely - Create Transform & Donate' do
     pod 'SDWebImage'
     pod 'MBCircularProgressBar'
     pod 'SwiftVideoGenerator'
+    pod 'FirebaseAnalytics'
+    pod 'FirebaseMessaging'
+    pod 'FirebaseInstanceID'
     
 end
