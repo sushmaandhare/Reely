@@ -9,7 +9,7 @@ import UIKit
 import  Alamofire
 import SDWebImage
 
-class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CreateTeamVCDelegate {
+class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CreateTeamVCDelegate, ProfileViewControllerDelegate {
     func successfullTeamCreate() {
         self.TeamListApiCall()
     }
@@ -47,6 +47,37 @@ class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     @IBAction func ProfileBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
+    func didSelectOption(index: Int) {
+        if index == 0{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let yourVC: UserProfileViewController = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+            self.navigationController?.pushViewController(yourVC, animated: true)
+        }else if index == 6{
+            guard let url = URL(string: "https://reely.world/terms_conditions.html") else { return }
+            UIApplication.shared.open(url)
+        }else if index == 7{
+            guard let url = URL(string: "https://reely.world/privacy-policy.html") else { return }
+            UIApplication.shared.open(url)
+        }else if index == 8{
+            let alert = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
+                UserDefaults.standard.set("", forKey: "uid")
+           //            self.navigationItem.title = "Profile"
+           //            self.navigationItem.rightBarButtonItem?.isEnabled = false
+                self.performSegue(withIdentifier: "unwindToContainerVC", sender: self)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func JoinTeamBtnAction(_ sender: UIButton) {
@@ -107,7 +138,7 @@ class TeamViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                                 let activityImg = Dict["activity_image"] as! String
                                 let joinMembers = Dict["joined_members"] as! String
                                 
-                                let obj = TeamList(activity_id: activityId, activity_name: activityName, desc: Description, activity_image: activityImg, joined_members: joinMembers, fundRaise: "", fund_donate: 0)
+                                let obj = TeamList(activity_id: activityId, activity_name: activityName, desc: Description, activity_image: activityImg, joined_members: joinMembers, fundRaise: "", fund_donate: 0, createdBy: "", daysLeft: "", createdPic: "")
                                 
                                 self.TeamArray.append(obj)
                                self.TeamTableView.reloadData()

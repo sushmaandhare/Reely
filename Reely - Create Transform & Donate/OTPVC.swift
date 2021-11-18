@@ -19,6 +19,7 @@ class OTPVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var TF4: UITextField!
     @IBOutlet weak var TF5: UITextField!
     @IBOutlet weak var TF6: UITextField!
+    @IBOutlet weak var lblMobNo: UILabel!
     
     var first_name:String! = ""
     var last_name:String! = ""
@@ -39,6 +40,9 @@ class OTPVC: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tap)
         
         mobNo = UserDefaults.standard.string(forKey: "MoblieNumber")
+        if let mob = mobNo{
+            self.lblMobNo.text = "Please enter OTP number shared on \(String(describing: mob)) number"
+        }
         
         TF1.delegate = self
         TF2.delegate = self

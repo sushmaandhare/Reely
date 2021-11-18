@@ -123,6 +123,7 @@ PODS:
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
   - IQKeyboardManagerSwift (6.5.6)
+  - MarqueeLabel (4.2.0)
   - MBCircularProgressBar (0.3.5)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
@@ -146,6 +147,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - ImageSlideshow (~> 1.9.0)
   - IQKeyboardManagerSwift
+  - MarqueeLabel
   - MBCircularProgressBar
   - SDWebImage
   - SDWebImage (~> 4.0)
@@ -176,6 +178,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - ImageSlideshow
     - IQKeyboardManagerSwift
+    - MarqueeLabel
     - MBCircularProgressBar
     - nanopb
     - PromisesObjC
@@ -206,12 +209,13 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  MarqueeLabel: f4117d82a55209171e8f66bd4859fa11ade335a1
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SwiftVideoGenerator: 804637c18f68a4f205d806e305ebceb4adcf3d25
 
-PODFILE CHECKSUM: 2fe15fab3d987d9a5f4ae3699a55026c955906fc
+PODFILE CHECKSUM: 61bd7e26e6d85c9bce4564c66ab93f4d42e2e1ee
 
 COCOAPODS: 1.10.0

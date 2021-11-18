@@ -27,10 +27,10 @@ class HomeHashtagTVC: UITableViewCell {
             self.lblViews.text = "View All"
             
             
-            let str = "\(self.videoMsg?.section_icon ?? "")friendship.png"
-            #warning("temp added becuase URL from response is not completed.")
+           // let str = "\(self.videoMsg?.section_icon ?? "")friendship.png"
+           // #warning("temp added becuase URL from response is not completed.")
 
-            self.imgHashTag.sd_setImage(with: URL(string: str), placeholderImage: UIImage(), options: SDWebImageOptions.continueInBackground, completed: nil)
+           // self.imgHashTag.sd_setImage(with: URL(string: str), placeholderImage: UIImage(), options: SDWebImageOptions.continueInBackground, completed: nil)
             
             self.hashTagCollectionView.reloadData()
         }

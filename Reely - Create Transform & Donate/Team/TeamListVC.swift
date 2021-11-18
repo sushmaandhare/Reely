@@ -18,10 +18,14 @@ class TeamListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TeamListApiCall()
+        
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        TeamListApiCall()
+    }
 
     func TeamListApiCall(){
         
@@ -65,8 +69,11 @@ class TeamListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                 let joinMembers = Dict["joined_members"] as! String
                                 let fund = Dict["fund_raise"] as! String
                                 let fundDonate = Dict["fund_donate"] as? Int
+                                let creator = Dict["created_by"] as! String
+                                let days = Dict["days_left"] as! String
+                                let creatorPic = Dict["creator_pic"] as! String
                                 
-                                let obj = TeamList(activity_id: activityId, activity_name: activityName, desc: Description, activity_image: activityImg, joined_members: joinMembers, fundRaise: fund, fund_donate: fundDonate)
+                                let obj = TeamList(activity_id: activityId, activity_name: activityName, desc: Description, activity_image: activityImg, joined_members: joinMembers, fundRaise: fund, fund_donate: fundDonate, createdBy: creator, daysLeft: days, createdPic: creatorPic)
                                 
                                 self.TeamArray.append(obj)
                             

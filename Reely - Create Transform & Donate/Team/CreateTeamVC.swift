@@ -83,17 +83,22 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
  
     @IBAction func onTapCreate(_ sender: UIButton) {
         print(self.selectedImg)
-        guard txtAbout.text != "" && txtFunds.text != "" && txtTeamName.text != "" && txtDate.text != "" else{
-            Alert(title: "Alert", msg: "All fields are mandatory")
-           return
-        }
+//        guard txtAbout.text != "" && txtFunds.text != "" && txtTeamName.text != "" && txtDate.text != "" else{
+//            Alert(title: "Alert", msg: "All fields are mandatory")
+//           return
+//        }
         
 //        guard selectedImg != nil else{
 //            Alert(title: "Alert", msg: "Please upload profile Image")
 //           return
 //        }
-        
+        if txtAbout.text == "" || txtFunds.text == "" || txtTeamName.text == "" || txtDate.text == "" {
+                      Alert(title: "Alert", msg: "All fields are mandatory")
+        }else if selectedImg == nil {
+            Alert(title: "Alert", msg: "Please upload profile Image")
+        }else{
         createTeamApiCall()
+        }
     }
     
     @IBAction func onTapCross(_ sender: UIButton) {
@@ -102,9 +107,7 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func Alert(title: String, msg: String){
     let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-    let okalertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {(alert : UIAlertAction!) in
-        self.dismiss(animated: true, completion: nil)
-    })
+    let okalertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: nil)
     alertController.addAction(okalertAction)
     present(alertController, animated: true, completion: nil)
     }

@@ -32,16 +32,18 @@ class TeamDetailsVC: UIViewController {
         self.teamImg.sd_setImage(with: URL(string:teamDetail.activity_image), placeholderImage: UIImage(named:"create-1"))
         self.lblTeamName.text = teamDetail.activity_name
         self.lblTeamDesc.text = teamDetail.desc
-     //   self.progressBar.setProgress(0.7, animated: true)
-        self.lblProgress.text = (teamDetail.fundRaise!) + " Raised out of " + (teamDetail.fundRaise!)
-//        self.creatorPic.layer.cornerRadius = self.creatorPic.frame.height/2
-//        self.creatorPic.clipsToBounds = true
-//        self.creatorPic.layer.borderColor = UIColor.white.cgColor
-//        self.creatorPic.layer.borderWidth = 1.0
-//        self.creatorPic.sd_setImage(with: URL(string:teamDetail.creator_pic ?? ""))
-//
-//        self.lblCreatedBy.text = teamDetail.created_by
-//        self.lblDaysLeft.text = teamDetail.days_left
+        self.progressBar.setProgress(0, animated: true)
+        let donate = String(teamDetail.fund_donate ?? 0)
+        self.lblProgress.text = donate + " Raised out of " + (teamDetail.fundRaise!)
+        self.creatorPic.layer.cornerRadius = self.creatorPic.frame.height/2
+        self.creatorPic.clipsToBounds = true
+        self.creatorPic.layer.borderColor = UIColor.white.cgColor
+        self.creatorPic.layer.borderWidth = 1.0
+//        self.creatorPic.sd_setImage(with: URL(string:teamDetail.createdPic ?? "create"))
+        self.creatorPic.image = UIImage(named: "ic_person")
+        
+        self.lblCreatedBy.text = teamDetail.createdBy
+        self.lblDaysLeft.text = teamDetail.daysLeft
     }
     
 

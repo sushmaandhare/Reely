@@ -19,6 +19,7 @@ class PhoneVerificationVC: UIViewController, UITextFieldDelegate {
     
     var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     var countryCode : String = ""
+    var mobNo : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

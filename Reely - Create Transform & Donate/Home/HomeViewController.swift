@@ -11,7 +11,7 @@ import AVKit
 import AVFoundation
 import SDWebImage
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ProfileViewControllerDelegate {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var totalVideoCount = 0
@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     var index:Int! = 0
     var Newssection:NSMutableArray = []
   //  var video_array =  [Discover]()
+    var avplayer:AVPlayer?
     
     var homeModel: HomeModel? //upper view // video
     var videoModel: VideoModel? //lower view //discover
@@ -50,6 +51,25 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        UIApplication.shared.isStatusBarHidden = false
+        
+        let visiblePaths = self.homeVideoCollectionView.indexPathsForVisibleItems
+        for i in visiblePaths  {
+            let cell = homeVideoCollectionView.cellForItem(at: i) as? HomeVideoCollectionViewCell
+            cell!.player!.pause()
+            
+            cell!.btnPayView.setImage(UIImage(named:"ic_play"), for: .normal)
+            cell!.btnPayView.isHidden = false
+            
+            
+            
+        }
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avplayer?.currentItem)
+
+    }
+    
     private func callHomeAPI() {
         HomeVideoApi(offset: 0)
         getDiscoverVideos()
@@ -69,22 +89,38 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func ProfileBtnAction(_ sender: Any) {
-        
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: ProfileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+        }
+
+    func didSelectOption(index: Int) {
+        if index == 0{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let yourVC: UserProfileViewController = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+            self.navigationController?.pushViewController(yourVC, animated: true)
+        }else if index == 6{
+            guard let url = URL(string: "https://reely.world/terms_conditions.html") else { return }
+            UIApplication.shared.open(url)
+        }else if index == 7{
+            guard let url = URL(string: "https://reely.world/privacy-policy.html") else { return }
+            UIApplication.shared.open(url)
+        }else if index == 8{
+            let alert = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
+                UserDefaults.standard.set("", forKey: "uid")
+           //            self.navigationItem.title = "Profile"
+           //            self.navigationItem.rightBarButtonItem?.isEnabled = false
+                self.performSegue(withIdentifier: "unwindToContainerVC", sender: self)
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
-    @IBAction func onTapLogout(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Are you sure you want to logout?", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {_ in
-            UserDefaults.standard.set("", forKey: "uid")
-       //            self.navigationItem.title = "Profile"
-       //            self.navigationItem.rightBarButtonItem?.isEnabled = false
-            self.performSegue(withIdentifier: "unwindToContainerVC", sender: self)
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
-            self.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
     
     func HomeVideoApi(offset: Int?){
         
@@ -165,8 +201,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
                         self?.navigationController?.pushViewController(controller, animated: true)
                     }
                 }else if let obj = object as? (String, Sections_videos), obj.0 == "video" {
-                    if let controller = self?.storyboard?.instantiateViewController(withIdentifier: "VideoPlayerVC") as? VideoPlayerVC {
-                        controller.selectedVideo = obj.1
+                    
+                    
+                    if let controller = self?.storyboard?.instantiateViewController(withIdentifier: "ViewAllHorizontalCollectionVC") as? ViewAllHorizontalCollectionVC {
+                        controller.sections_videos = self?.videoModel?.msg?[indexPath.row].sections_videos
+                        controller.selectedIndex = indexPath.item
                         self?.navigationController?.pushViewController(controller, animated: true)
                     }
                 }
@@ -195,7 +234,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeVideoCollectionViewCell", for: indexPath) as? HomeVideoCollectionViewCell {
             cell.homeMsg = self.homeModel?.msg?[indexPath.item]
-            cell.btnPayView.setImage(UIImage(named: "ic_play"), for: .normal)
+            cell.btnPayView.setImage(UIImage(named: "ic_pause"), for: .normal)
             cell.btnPayView.isHidden = true
             cell.btnPayView.tag = indexPath.row
            
@@ -263,16 +302,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let indexPath = IndexPath(row: buttonTag!, section: 0)
         let cell = homeVideoCollectionView.cellForItem(at: indexPath) as! HomeVideoCollectionViewCell
         cell.btnPayView.isHidden = false
-        if(cell.btnPayView.currentImage == UIImage(named: "ic_play")){ //play
+        if(cell.btnPayView.currentImage == UIImage(named: "ic_pause")){ //play
             
             
-            cell.btnPayView.setImage( UIImage(named: "ic_pause"), for: .normal) //pause
+            cell.btnPayView.setImage( UIImage(named: "ic_play"), for: .normal) //pause
             cell.player?.pause()
 
-        }else if(cell.btnPayView.currentImage == UIImage(named: "ic_pause")){ //pause
+        }else if(cell.btnPayView.currentImage == UIImage(named: "ic_play")){ //pause
       
                 
-                cell.btnPayView.setImage( UIImage(named: "ic_play"), for: .normal) //play
+                cell.btnPayView.setImage( UIImage(named: "ic_pause"), for: .normal) //play
                 cell.player?.play()
                 cell.btnPayView.isHidden = true
         

@@ -68,13 +68,13 @@ class HashTagViewController: UIViewController {
                     self?.hashTagModel = try JSONDecoder().decode(HashTagModel.self, from: json)
                     if let code = self?.hashTagModel?.code, (code == "200") {
                         DispatchQueue.main.async {
-                            self?.lblHashTag.text = self?.videoMsg?.section_name ?? ""
+                            self?.lblHashTag.text = "# \(self?.videoMsg?.section_name ?? "")"
                             self?.lblViews.text = "\(self?.videoMsg?.section_views ?? "0")M views"
                             
-                            let str = "\(self?.videoMsg?.section_icon ?? "")friendship.png"
-                            #warning("temp added becuase URL from response is not completed.")
-
-                            self?.imgViewHashTagView.sd_setImage(with: URL(string: str), placeholderImage: UIImage(), options: SDWebImageOptions.continueInBackground, completed: nil)
+//                            let str = "\(self?.videoMsg?.section_icon ?? "")friendship.png"
+//                            #warning("temp added becuase URL from response is not completed.")
+//
+//                            self?.imgViewHashTagView.sd_setImage(with: URL(string: str), placeholderImage: UIImage(), options: SDWebImageOptions.continueInBackground, completed: nil)
                             self?.hashTagCollectionView.reloadData()
                         }
                     }

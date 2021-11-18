@@ -16,8 +16,11 @@ struct TeamList {
     var joined_members:String! = ""
     var fundRaise:String? = ""
     var fund_donate:Int? = 0
+    var createdBy:String? = ""
+    var daysLeft:String? = ""
+    var createdPic:String? = ""
     
-    init(activity_id: String!,activity_name: String!, desc: String!, activity_image: String!, joined_members: String!, fundRaise: String?, fund_donate: Int?) {
+    init(activity_id: String!,activity_name: String!, desc: String!, activity_image: String!, joined_members: String!, fundRaise: String?, fund_donate: Int?, createdBy: String?, daysLeft: String?, createdPic: String?) {
        
         self.activity_id = activity_id
         self.activity_name = activity_name
@@ -26,6 +29,9 @@ struct TeamList {
         self.joined_members = joined_members
         self.fundRaise = fundRaise
         self.fund_donate = fund_donate
+        self.createdBy = createdBy
+        self.daysLeft = daysLeft
+        self.createdPic = createdPic
     }
 
 }

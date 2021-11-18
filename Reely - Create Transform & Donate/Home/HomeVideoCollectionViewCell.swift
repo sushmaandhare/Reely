@@ -80,13 +80,20 @@ class HomeVideoCollectionViewCell: UICollectionViewCell {
             
             self.viewVideoPlayer.layer.backgroundColor = UIColor.black.cgColor
             
-            if let f_name = self.homeMsg?.user_info?.first_name, let l_name = self.homeMsg?.user_info?.last_name {
-                lblUserName.text = f_name + l_name
+            if var f_name = self.homeMsg?.user_info?.first_name, var l_name = self.homeMsg?.user_info?.last_name {
+                if f_name == "" {
+                    f_name = "User"
+                }
+                
+                if l_name == ""{
+                    l_name = "User"
+                }
+                lblUserName.text = f_name + " " + l_name
             }
             
-            if let str = self.homeMsg?.user_info?.profile_pic {
-                self.imgProfile.sd_setImage(with: URL(string: str), placeholderImage: UIImage(named: "profile"), options: SDWebImageOptions.continueInBackground, completed: nil)
-            }
+//            if let str = self.homeMsg?.user_info?.profile_pic {
+//                self.imgProfile.sd_setImage(with: URL(string: str), placeholderImage: UIImage(named: "profile"), options: SDWebImageOptions.continueInBackground, completed: nil)
+//            }
             
             self.lblLikeCount.text = self.homeMsg?.count?.like_count ?? "0"
             self.lblCommentCount.text = self.homeMsg?.count?.share ?? "0"
