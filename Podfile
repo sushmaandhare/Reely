@@ -21,6 +21,6 @@ target 'Reely - Create Transform & Donate' do
     pod 'SwiftVideoGenerator'
     pod 'FirebaseAnalytics'
     pod 'FirebaseMessaging'
-    pod 'FirebaseInstanceID'
+   
     
 end

@@ -1373,10 +1373,6 @@ Copyright 2021 Google
    limitations under the License.
 
 
-## FirebaseInstanceID
-
-Copyright 2017 Google
-
 ## FirebaseMessaging
 
 

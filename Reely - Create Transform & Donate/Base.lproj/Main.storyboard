@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8E-CC-HQ1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8E-CC-HQ1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -980,7 +979,7 @@ Enjoy videos</string>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamTableViewCell" rowHeight="127" id="EXs-qZ-Yaa" customClass="TeamTableViewCell" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="44.5" width="414" height="127"/>
+                                                                <rect key="frame" x="0.0" y="24.5" width="414" height="127"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EXs-qZ-Yaa" id="FJx-Mg-zzO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
@@ -1712,7 +1711,7 @@ Enjoy videos</string>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DonateTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DonateTableViewCell" rowHeight="315" id="gmY-rQ-nru" customClass="DonateTableViewCell" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="414" height="315"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="414" height="315"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gmY-rQ-nru" id="6tz-wo-tMT">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="315"/>
@@ -1754,7 +1753,7 @@ Enjoy videos</string>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VGd-dK-5TB">
-                                                                                    <rect key="frame" x="65" y="48.5" width="20" height="19"/>
+                                                                                    <rect key="frame" x="65" y="49" width="20" height="19"/>
                                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="20" id="BIk-Ab-Nna"/>
@@ -2324,7 +2323,7 @@ Enjoy videos</string>
                                                                             <constraint firstItem="43W-xg-i17" firstAttribute="top" secondItem="ipu-Ad-S9o" secondAttribute="top" id="Mnd-Hc-pon"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-C0-xpe">
+                                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-C0-xpe">
                                                                         <rect key="frame" x="0.0" y="395" width="415" height="5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
@@ -2435,7 +2434,7 @@ Enjoy videos</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeHashtagTVC" rowHeight="288" id="jzj-sI-Y7K" customClass="HomeHashtagTVC" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="474.5" width="414" height="288"/>
+                                        <rect key="frame" x="0.0" y="454.5" width="414" height="288"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jzj-sI-Y7K" id="XOK-4y-ifM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="288"/>
@@ -2455,7 +2454,7 @@ Enjoy videos</string>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs1-iU-jvx">
-                                                                    <rect key="frame" x="70" y="12.5" width="214" height="0.0"/>
+                                                                    <rect key="frame" x="70" y="12.5" width="223" height="0.0"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -2467,16 +2466,16 @@ Enjoy videos</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-Px-mv4">
-                                                                    <rect key="frame" x="304" y="20" width="100" height="30"/>
+                                                                    <rect key="frame" x="313" y="20" width="91" height="30"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65.1M views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMn-BL-385">
-                                                                            <rect key="frame" x="10" y="10" width="69" height="10"/>
+                                                                            <rect key="frame" x="10" y="10" width="63" height="10"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xe0-5m-EYP">
-                                                                            <rect key="frame" x="85" y="12" width="5" height="6.5"/>
+                                                                            <rect key="frame" x="76" y="12" width="5" height="6.5"/>
                                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="5" id="fl7-CY-BiZ"/>
@@ -2484,7 +2483,7 @@ Enjoy videos</string>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYZ-di-9sp">
-                                                                            <rect key="frame" x="1" y="1" width="98" height="28"/>
+                                                                            <rect key="frame" x="1" y="1" width="89" height="28"/>
                                                                             <connections>
                                                                                 <action selector="btnViewClick:" destination="jzj-sI-Y7K" eventType="touchUpInside" id="GB4-VA-WTU"/>
                                                                             </connections>
@@ -2497,10 +2496,9 @@ Enjoy videos</string>
                                                                         <constraint firstItem="UMn-BL-385" firstAttribute="leading" secondItem="9uC-Px-mv4" secondAttribute="leading" constant="10" id="Ghv-ao-hKl"/>
                                                                         <constraint firstAttribute="bottom" secondItem="JYZ-di-9sp" secondAttribute="bottom" constant="1" id="Jcr-Sq-qkl"/>
                                                                         <constraint firstItem="JYZ-di-9sp" firstAttribute="top" secondItem="9uC-Px-mv4" secondAttribute="top" constant="1" id="L7T-xy-DIF"/>
-                                                                        <constraint firstAttribute="width" constant="100" id="O3R-wv-wG4"/>
                                                                         <constraint firstItem="UMn-BL-385" firstAttribute="top" secondItem="9uC-Px-mv4" secondAttribute="top" constant="10" id="PBn-J2-cKc"/>
                                                                         <constraint firstAttribute="bottom" secondItem="UMn-BL-385" secondAttribute="bottom" constant="10" id="QtG-II-ONs"/>
-                                                                        <constraint firstItem="Xe0-5m-EYP" firstAttribute="leading" secondItem="UMn-BL-385" secondAttribute="trailing" constant="6" id="boW-lh-Jpd"/>
+                                                                        <constraint firstItem="Xe0-5m-EYP" firstAttribute="leading" secondItem="UMn-BL-385" secondAttribute="trailing" constant="3" id="boW-lh-Jpd"/>
                                                                         <constraint firstItem="Xe0-5m-EYP" firstAttribute="centerY" secondItem="UMn-BL-385" secondAttribute="centerY" id="m4L-jn-bbj"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Xe0-5m-EYP" secondAttribute="trailing" constant="10" id="nC6-as-1PD"/>
                                                                         <constraint firstItem="JYZ-di-9sp" firstAttribute="leading" secondItem="9uC-Px-mv4" secondAttribute="leading" constant="1" id="ndt-mY-scN"/>
@@ -2804,10 +2802,10 @@ Enjoy videos</string>
                                 <color key="tintColor" red="0.48412352800000003" green="0.7447761893" blue="0.19113841649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUo-Av-wAM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_background" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-uw-oIo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2819,7 +2817,7 @@ Enjoy videos</string>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIO-pH-YOc">
-                                <rect key="frame" x="179" y="348.5" width="56" height="116.5"/>
+                                <rect key="frame" x="179" y="321.5" width="56" height="116.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="100"/>
                                 <color key="textColor" red="0.12594" green="0.35385" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2833,7 +2831,7 @@ Enjoy videos</string>
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <view hidden="YES" alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xrw-jF-8Ai">
-                                <rect key="frame" x="20" y="653" width="374" height="40"/>
+                                <rect key="frame" x="20" y="599" width="374" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fDp-FV-s8h"/>
@@ -2845,7 +2843,7 @@ Enjoy videos</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFV-Gr-6Tb">
-                                <rect key="frame" x="320.5" y="653" width="73.5" height="40"/>
+                                <rect key="frame" x="320.5" y="599" width="73.5" height="40"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="3x">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2855,7 +2853,7 @@ Enjoy videos</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCW-sh-xF5">
-                                <rect key="frame" x="93.5" y="653" width="73.5" height="40"/>
+                                <rect key="frame" x="93.5" y="599" width="73.5" height="40"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="0.2x">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2865,7 +2863,7 @@ Enjoy videos</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A83-G0-Fv8">
-                                <rect key="frame" x="20" y="653" width="73.5" height="40"/>
+                                <rect key="frame" x="20" y="599" width="73.5" height="40"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="0.3x">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2875,7 +2873,7 @@ Enjoy videos</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cox-7f-eGI">
-                                <rect key="frame" x="167" y="653" width="74" height="40"/>
+                                <rect key="frame" x="167" y="599" width="74" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="1x">
@@ -2891,7 +2889,7 @@ Enjoy videos</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-B2-Scm">
-                                <rect key="frame" x="247" y="653" width="73.5" height="40"/>
+                                <rect key="frame" x="247" y="599" width="73.5" height="40"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <state key="normal" title="2x">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3086,7 +3084,7 @@ Enjoy videos</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1j0-hO-UtQ" userLabel="Footer">
-                                <rect key="frame" x="0.0" y="703" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="649" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5L-DW-vux">
                                         <rect key="frame" x="167" y="10" width="80" height="80"/>
@@ -4341,7 +4339,7 @@ Enjoy videos</string>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotificationTVC" rowHeight="114" id="ktr-fB-zOC" customClass="NotificationTVC" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="44.5" width="414" height="114"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="114"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ktr-fB-zOC" id="KKl-ss-LLn">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
@@ -4528,7 +4526,7 @@ Enjoy videos</string>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProfileTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewCell" rowHeight="66" id="OER-RT-xnH" customClass="ProfileTableViewCell" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="44.5" width="334" height="66"/>
+                                                                <rect key="frame" x="0.0" y="24.5" width="334" height="66"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OER-RT-xnH" id="Z48-x1-haZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="66"/>
@@ -6282,7 +6280,7 @@ Enjoy videos</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HashtagTableViewCell" rowHeight="60" id="oB5-LD-Wne" customClass="HashtagTableViewCell" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="393" height="60"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="393" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oB5-LD-Wne" id="Vlb-Or-RqP">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -6540,7 +6538,7 @@ Enjoy videos</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FundDonateMemberTVC" rowHeight="129" id="6bt-xz-vGY" customClass="FundDonateMemberTVC" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="374" height="129"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="374" height="129"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6bt-xz-vGY" id="64V-dr-ASL">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
@@ -6853,6 +6851,17 @@ Enjoy videos</string>
                                                     <action selector="onTapCreate:" destination="pcK-QX-ryC" eventType="touchUpInside" id="6DV-fE-c8l"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMu-MY-vXD">
+                                                <rect key="frame" x="369" y="12" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="82F-ac-xQ9"/>
+                                                    <constraint firstAttribute="width" constant="30" id="kRI-5x-Nn1"/>
+                                                </constraints>
+                                                <state key="normal" image="ic_cross_white.png"/>
+                                                <connections>
+                                                    <action selector="onTapCross:" destination="pcK-QX-ryC" eventType="touchDragInside" id="HtH-xv-2dx"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.22745098039215686" green="0.16862745098039217" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -6860,6 +6869,8 @@ Enjoy videos</string>
                                             <constraint firstItem="VUG-Gm-fqY" firstAttribute="trailing" secondItem="7Nt-76-fiJ" secondAttribute="trailing" id="6a4-jl-jFZ"/>
                                             <constraint firstItem="Ksa-U9-umm" firstAttribute="leading" secondItem="oXN-GM-Zc3" secondAttribute="leading" id="AUW-mh-AjH"/>
                                             <constraint firstItem="xid-Tl-BDc" firstAttribute="trailing" secondItem="v2V-zb-76y" secondAttribute="trailing" id="BU8-yk-g2w"/>
+                                            <constraint firstAttribute="trailing" secondItem="mMu-MY-vXD" secondAttribute="trailing" constant="15" id="C6C-fY-9N9"/>
+                                            <constraint firstItem="mMu-MY-vXD" firstAttribute="centerY" secondItem="FSD-fH-G2w" secondAttribute="centerY" id="Gq3-oy-bjw"/>
                                             <constraint firstItem="0b8-rr-lqs" firstAttribute="leading" secondItem="TO6-De-AyD" secondAttribute="leading" constant="15" id="KDO-Ud-Epm"/>
                                             <constraint firstItem="ezu-ll-58U" firstAttribute="top" secondItem="Ksa-U9-umm" secondAttribute="bottom" constant="20" id="KNT-ke-ggp"/>
                                             <constraint firstAttribute="trailing" secondItem="0b8-rr-lqs" secondAttribute="trailing" constant="15" id="KbP-RK-9yo"/>
@@ -6948,7 +6959,7 @@ Enjoy videos</string>
                                 <rect key="frame" x="0.0" y="40" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-Ue-Epv">
-                                        <rect key="frame" x="45" y="20" width="58.5" height="20.5"/>
+                                        <rect key="frame" x="45" y="20" width="59" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -7088,7 +7099,7 @@ Enjoy videos</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1pZ-IJ-cC6">
-                                                                                <rect key="frame" x="65" y="48.5" width="20" height="19"/>
+                                                                                <rect key="frame" x="65" y="49" width="20" height="19"/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="20" id="QCK-m0-IXq"/>
@@ -7764,7 +7775,7 @@ Enjoy videos</string>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamListTableViewCell" rowHeight="265" id="P2S-j8-5lx" customClass="TeamListTableViewCell" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="374" height="265"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="374" height="265"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P2S-j8-5lx" id="LFy-jN-VcU">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="265"/>
@@ -8070,7 +8081,7 @@ Enjoy videos</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeamMemberListTVC" rowHeight="130" id="Y6c-Km-VGc" customClass="TeamMemberListTVC" customModule="Reely___Create_Transform___Donate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="130"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y6c-Km-VGc" id="VYc-l9-fX7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -9375,7 +9386,7 @@ Enjoy videos</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n1u-AD-Nub">
-                                                                <rect key="frame" x="65" y="48.5" width="20" height="19"/>
+                                                                <rect key="frame" x="65" y="49" width="20" height="19"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="Jcf-pL-8c9"/>
@@ -9674,7 +9685,7 @@ Enjoy videos</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I9h-qf-ejB">
-                                                            <rect key="frame" x="355" y="638.5" width="40" height="159.5"/>
+                                                            <rect key="frame" x="355" y="558.5" width="40" height="159.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t9R-ko-YBn">
                                                                     <rect key="frame" x="5" y="0.0" width="30" height="46.5"/>
@@ -9879,7 +9890,7 @@ Enjoy videos</string>
                                                                 <constraint firstItem="dV4-gv-DSr" firstAttribute="top" secondItem="TZA-wU-cYj" secondAttribute="top" id="ezH-Va-6Q5"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2N0-2c-2Hx">
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2N0-2c-2Hx">
                                                             <rect key="frame" x="0.0" y="813" width="415" height="5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -9923,7 +9934,7 @@ Enjoy videos</string>
                                                         <constraint firstAttribute="trailing" secondItem="HVt-sN-kRb" secondAttribute="trailing" constant="15" id="GF5-mQ-c8u"/>
                                                         <constraint firstItem="SRD-7p-0vk" firstAttribute="top" secondItem="8zW-4S-EOP" secondAttribute="top" id="LdP-N7-Xf1"/>
                                                         <constraint firstAttribute="trailing" secondItem="2N0-2c-2Hx" secondAttribute="trailing" id="O69-yw-L3n"/>
-                                                        <constraint firstAttribute="bottom" secondItem="I9h-qf-ejB" secondAttribute="bottom" constant="20" id="PiH-gb-f0u"/>
+                                                        <constraint firstAttribute="bottom" secondItem="I9h-qf-ejB" secondAttribute="bottom" constant="100" id="PiH-gb-f0u"/>
                                                         <constraint firstItem="2N0-2c-2Hx" firstAttribute="top" secondItem="TZA-wU-cYj" secondAttribute="bottom" constant="20" id="Qlg-Ea-BRJ"/>
                                                         <constraint firstItem="SRD-7p-0vk" firstAttribute="centerY" secondItem="SRw-Cf-5qe" secondAttribute="centerY" id="X1u-Kg-auf"/>
                                                         <constraint firstAttribute="bottom" secondItem="SRD-7p-0vk" secondAttribute="bottom" id="Xhn-RV-9gX"/>
@@ -10278,6 +10289,7 @@ Enjoy videos</string>
         <image name="home_gray" width="29" height="29"/>
         <image name="home_white" width="30" height="30"/>
         <image name="ic_black_disk" width="102" height="102"/>
+        <image name="ic_cross_white.png" width="13" height="13"/>
         <image name="ic_flash_off" width="36" height="36"/>
         <image name="ic_like" width="40" height="40"/>
         <image name="ic_like_fill" width="40" height="40"/>
@@ -10315,8 +10327,8 @@ Enjoy videos</string>
         <image name="team_white" width="30" height="30"/>
         <image name="text" width="30" height="30"/>
         <image name="tickmark.png" width="192" height="192"/>
-        <image name="timer" catalog="system" width="128" height="121"/>
         <image name="timer" width="30" height="30"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <image name="timer_img" width="30" height="30"/>
         <image name="upload" width="30" height="30"/>
         <image name="verify" width="30" height="30"/>

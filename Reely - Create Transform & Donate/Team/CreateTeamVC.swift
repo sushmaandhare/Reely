@@ -46,12 +46,12 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         self.txtDate.delegate = self
         // Do any additional setup after loading the view.
       
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-YYYY"
-        let dateStr = dateFormatter.string(from: date)
+//        let date = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd-MM-YYYY"
+//        let dateStr = dateFormatter.string(from: date)
         
-        txtDate.text = dateStr
+        //txtDate.text = dateStr
         showDatePicker()
        
     }
@@ -59,6 +59,7 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     func showDatePicker(){
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
+        datePicker.minimumDate = Date()
         let toolbar = UIToolbar();
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker))
@@ -93,6 +94,10 @@ class CreateTeamVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
 //        }
         
         createTeamApiCall()
+    }
+    
+    @IBAction func onTapCross(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func Alert(title: String, msg: String){

@@ -52,7 +52,7 @@ class UserProfileViewController: UIViewController, UICollectionViewDelegate, UIC
     func getVideos(offset: Int) {
         let url : String = self.appDelegate.baseUrl!+self.appDelegate.showMyAllVideos!
         
-        let parameter :[String:Any]? = ["my_fb_id": "111891957049886694486","fb_id": "111891957049886694486","offset":"0"]
+        let parameter :[String:Any]? = ["my_fb_id": UserDefaults.standard.string(forKey: "uid")!,"fb_id": UserDefaults.standard.string(forKey: "uid")!,"offset":"0"]
         let headers: HTTPHeaders = ["api-key": "4444-3333-2222-1111"]
         
         Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: headers).validate().responseData { [weak self] (responseData) in
