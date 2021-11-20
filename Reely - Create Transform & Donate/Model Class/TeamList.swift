@@ -64,11 +64,11 @@ struct TeamMemberList {
 }
 
 struct SelfTeamDetails {
-    var fb_id:String! = ""
-    var activity_name:String! = ""
-    var desc:String! = ""
-    var activity_image:String! = ""
-    var joined_members:String! = ""
+    var fb_id:String = ""
+    var activity_name:String? = ""
+    var desc:String? = ""
+    var activity_image:String? = ""
+    var joined_members:String? = ""
     var fundRaise:String? = ""
     var last_date:String? = ""
     var is_verified:String? = ""
@@ -81,7 +81,7 @@ struct SelfTeamDetails {
     var creator_pic:String? = ""
     var days_left:String? = ""
     
-    init(fb_id: String!,activity_name: String!, desc: String!, activity_image: String!, joined_members: String!, fundRaise: String!, last_date: String!, is_verified: String!, total_heart: String!, userVideo: [UserVideo], fund_donate:String!, created_by: String!, creator_pic:String?, days_left:String?) {
+    init(fb_id: String,activity_name: String?, desc: String?, activity_image: String?, joined_members: String?, fundRaise: String?, last_date: String?, is_verified: String?, total_heart: String?, userVideo: [UserVideo], fund_donate:String?, created_by: String?, creator_pic:String?, days_left:String?) {
        
         self.fb_id = fb_id
         self.activity_name = activity_name

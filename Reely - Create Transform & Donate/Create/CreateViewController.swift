@@ -20,6 +20,8 @@ import SwiftVideoGenerator
 
 class CreateViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TimerVCDelegate {
   
+    var activityId = ""
+    
     func NotifyDismiss(videoUrl: URL) {
        // viewSound.isUserInteractionEnabled = false
         if videoUrl.fileSize <= 60000000{
@@ -523,6 +525,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
 
                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc: PreviewVC = storyboard.instantiateViewController(withIdentifier: "PreviewVC") as! PreviewVC
+                vc.activityId = self.activityId
                 vc.myPlayer = player
                    if UserDefaults.standard.url(forKey: "finalVideo") != nil{
                       vc.myVideoURL = UserDefaults.standard.url(forKey: "finalVideo")
@@ -567,6 +570,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         vc.asset = asset
         vc.speed = videoSpeed
         vc.isReverse = self.isReverse
+        vc.activityId = self.activityId
         self.navigationController?.pushViewController(vc, animated: true)
 
     }

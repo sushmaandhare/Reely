@@ -196,7 +196,7 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
         let yourVC: TeamMemberListVC = storyboard.instantiateViewController(withIdentifier: "TeamMemberListVC") as! TeamMemberListVC
         yourVC.activityId = self.activityId
         
-        self.navigationController?.pushViewController(yourVC, animated: true)
+        self.present(yourVC, animated: true, completion: nil)
     }
     
     @IBAction func onTapRaisedFund(_ sender: UITapGestureRecognizer) {
@@ -205,6 +205,12 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
         yourVC.activityId = self.activityId
         yourVC.desc = lblTeamDesc.text ?? ""
         self.navigationController?.pushViewController(yourVC, animated: true)
+    }
+    @IBAction func onTapCreateVideo(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
+        vc.activityId = self.activityId
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func downloadImage(img:String) {
@@ -230,31 +236,36 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        if indexPath.item == 0{
 //            let cell:CreateTeamVideoCVC = collectionView.dequeueReusableCell(withReuseIdentifier: "CreateTeamVideoCVC", for: indexPath) as! CreateTeamVideoCVC
+//            cell.btnPlus.addTarget(self, action: #selector(openCreateVideo), for: .touchUpInside)
 //
-//            return cell
+//             return cell
 //        }else{
             let cell:TeamVideoCVC = collectionView.dequeueReusableCell(withReuseIdentifier: "TeamVideoCVC", for: indexPath) as! TeamVideoCVC
             cell.videoImg.sd_setImage(with: URL(string:(TeamMemberArray.first?.userVideo[indexPath.row].thum)!), placeholderImage: UIImage(named:"create-1"))
             cell.lblView.text = TeamMemberArray.first?.userVideo[indexPath.row].viewCount
             return cell
-//        }
+  //      }
         
     }
     
+//    @objc func openCreateVideo(){
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
+//        vc.activityId = self.activityId
+//         self.navigationController?.pushViewController(vc, animated: true)
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if indexPath.item == 0{
+//            print("add")
+//        }else{
         let obj = self.videos[indexPath.row] 
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: PlayerVC = storyboard.instantiateViewController(withIdentifier: "PlayerVC") as! PlayerVC
         vc.selectedVideo = obj
-        //vc.myVideoURL = URL(string: obj.video)
-       // vc.videoId = obj.v_id
-//        if indexPath.row > 0{
-//            let range = 0...(indexPath.row - 1)
-//            self.allVideos.removeSubrange(range)
-//        }
-//        vc.friends_array = self.allVideos
+     
         self.navigationController?.pushViewController(vc, animated: true)
-
+       // }
     }
     
     @IBAction func onTapBack(_ sender: UIButton) {

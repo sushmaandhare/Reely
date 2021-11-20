@@ -18,7 +18,7 @@ class TrimmerViewController: UIViewController {
 //        let audioUrl = UserDefaults.standard.string(forKey: "audioUrl")
 //        self.mergeFilesWithUrl(videoUrl: self.url as URL, audioUrl: URL(string: audioUrl!)!)
 //    }
-    
+    var activityId = ""
     var isReverse = false
     var isPlaying = true
     var isSliderEnd = true
@@ -320,6 +320,7 @@ class TrimmerViewController: UIViewController {
                 
             }
             vc.myPlayer = myplayer
+        vc.activityId = self.activityId
             //vc.isReverse = self.isReverse
             self.navigationController?.pushViewController(vc, animated: true)
         }

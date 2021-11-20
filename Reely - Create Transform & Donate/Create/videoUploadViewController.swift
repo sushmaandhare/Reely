@@ -29,6 +29,7 @@ class videoUploadViewController: UIViewController, HashTagListVCDelegate, Privac
         lblPrivacy.text = val
     }
     
+    var activityId = ""
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var allowComment = true
     var allowDuet = "1"
@@ -175,9 +176,9 @@ class videoUploadViewController: UIViewController, HashTagListVCDelegate, Privac
         
         
         if UserDefaults.standard.string(forKey: "audioUrl") == ""{
-            parameter = ["fb_id":UserDefaults.standard.string(forKey: "uid")!,"sound_id":"null","description":discTextField.text ?? "" , "privacy_type" : lblPrivacy.text ?? "Public", "allow_comments" : allowComment, "allow_duet" : allowDuet, "hashtags_json" : json_Arra, "duet": "0", "video_id": ""]
+            parameter = ["fb_id":UserDefaults.standard.string(forKey: "uid")!,"sound_id":"null","description":discTextField.text ?? "" , "privacy_type" : lblPrivacy.text ?? "Public", "allow_comments" : allowComment, "allow_duet" : allowDuet, "hashtags_json" : json_Arra, "duet": "0", "video_id": "", "activity_id": self.activityId]
         }else{
-            parameter = ["fb_id":UserDefaults.standard.string(forKey: "uid")!,"sound_id":UserDefaults.standard.string(forKey: "sid")!,"description":discTextField.text ?? "", "privacy_type" : lblPrivacy.text ?? "Public", "allow_comments" : allowComment, "allow_duet" : allowDuet, "hashtags_json" : json_Arra, "duet": "0", "video_id": ""]
+            parameter = ["fb_id":UserDefaults.standard.string(forKey: "uid")!,"sound_id":UserDefaults.standard.string(forKey: "sid")!,"description":discTextField.text ?? "", "privacy_type" : lblPrivacy.text ?? "Public", "allow_comments" : allowComment, "allow_duet" : allowDuet, "hashtags_json" : json_Arra, "duet": "0", "video_id": "", "activity_id": self.activityId]
         }
         print(url)
         print(parameter)

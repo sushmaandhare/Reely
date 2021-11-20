@@ -20,6 +20,7 @@ class PreviewVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     //            self.delegate?.DismissPlayerVC()
     //        })
     //    }
+    var activityId = ""
     
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var newView: UIView!
@@ -124,7 +125,7 @@ class PreviewVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         let vc: videoUploadViewController = storyboard.instantiateViewController(withIdentifier: "videoUploadViewController") as! videoUploadViewController
         //vc.delegate = self
         vc.videoUrl = self.myVideoURL
-       
+        vc.activityId = self.activityId
         vc.videoId = self.videoId
         var imageData11: Data? = nil
         //let url = URL(fileURLWithPath: url)
