@@ -1267,6 +1267,9 @@ Enjoy videos</string>
                                                                     <constraint firstItem="L17-fd-7YH" firstAttribute="leading" secondItem="aaI-uC-jYd" secondAttribute="leading" constant="35" id="nbD-r2-KTA"/>
                                                                     <constraint firstItem="L17-fd-7YH" firstAttribute="top" secondItem="aaI-uC-jYd" secondAttribute="top" constant="25" id="z4o-pe-ccW"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="0qC-Jb-J53" appends="YES" id="h7V-3y-6K3"/>
+                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INi-TO-0Rg">
                                                                 <rect key="frame" x="136.5" y="0.0" width="131" height="80"/>
@@ -1343,6 +1346,9 @@ Enjoy videos</string>
                                                                     <constraint firstItem="GoG-Jd-8go" firstAttribute="top" secondItem="7Y0-q8-CRt" secondAttribute="top" id="Zc0-YB-zBD"/>
                                                                     <constraint firstItem="GoG-Jd-8go" firstAttribute="leading" secondItem="7Y0-q8-CRt" secondAttribute="trailing" constant="15" id="b7A-Sc-xAU"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="ZFs-ez-9BH" appends="YES" id="xiv-Kd-LWs"/>
+                                                                </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-dU-kw9">
                                                                 <rect key="frame" x="272.5" y="0.0" width="131.5" height="80"/>

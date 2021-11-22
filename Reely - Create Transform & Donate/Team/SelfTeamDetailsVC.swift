@@ -206,6 +206,7 @@ class SelfTeamDetailsVC: UIViewController, UICollectionViewDelegate, UICollectio
         yourVC.desc = lblTeamDesc.text ?? ""
         self.navigationController?.pushViewController(yourVC, animated: true)
     }
+    
     @IBAction func onTapCreateVideo(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CreateViewController") as! CreateViewController
